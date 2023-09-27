@@ -1,37 +1,39 @@
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Nest - Multipurpose eCommerce HTML Template</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta property="og:title" content=""/>
+    <meta property="og:type" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content=""/>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/imgs/theme/favicon.svg')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg"/>
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/main.css?v=5.6')}}" />
     {{--Account upload anh --}}
     <link rel="stylesheet" href="{{asset('assets/css/style_blog3.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets/css/main.css?v=5.6')}}"/>
 </head>
 <body>
-@include('Client/Header/header');
+    <x-client.header.header></x-client.header.header>
 <!-- Navbar End -->
 
 <!-- Carousel Start -->
-<div class="wapper-main">
-    @yield('main')
-</div>
+    <div class="wapper-main">
+        @yield('main')
+    </div>
 <!-- Contact Start -->
+    <x-client.footer.footer></x-client.footer.footer>
+    <!-- Footer Start -->
 
-<!-- Footer Start -->
-@include('Client/Footer/footer');
 
 </body>
 <script src="{{asset('assets/js/vendor/modernizr-3.6.0.min.js')}}"></script>

@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     function index(){
-        return view('Client.layout.master');
+        return view('Client.pages.home');
+
 
     }
 }
