@@ -16,4 +16,5 @@ Route::group(['prefix' => '/'], function (){
 
     });
     Route::get('forgot-password', [ForgotController::class, 'forgot'])->name('forgot');
+    Route::get('reset-password', [ForgotController::class, 'reset'])->name('resetPassword');
 });

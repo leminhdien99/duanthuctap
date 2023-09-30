@@ -9,4 +9,7 @@ class ForgotController extends Controller
     function forgot(){
         return view('client.pages.forgot');
     }
+    function reset(){
+        return view('client.pages.resetpassword');
+    }
 }
