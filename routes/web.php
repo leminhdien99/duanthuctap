@@ -6,7 +6,7 @@ use App\Http\Controllers\Client\About\AboutController;
 use App\Http\Controllers\Client\Contact\ContactController;
 use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
 use App\Http\Controllers\Client\BlogDetail\BlogDetailController;
-
+use App\Http\Controllers\Client\Product\ProductController;
 Route::group(['prefix' => '/'], function (){
     Route::get('', [HomeController::class, 'index'])->name('index');
     Route::group(['prefix' => 'cart'], function (){
@@ -14,6 +14,10 @@ Route::group(['prefix' => '/'], function (){
         Route::get('add', [CartController::class, 'add'])->name('addCart');
         Route::get('delete', [CartController::class, 'delete'])->name('deleteCart');
 
+
+    });
+    Route::group(['prefix' => 'product'], function (){
+        Route::get('list', [ProductController::class, 'product'])->name('product');
     });
     Route::get('about', [AboutController::class, 'about'])->name('about');
     Route::get('contact', [ContactController::class, 'contact'])->name('contact');
@@ -22,4 +26,5 @@ Route::group(['prefix' => '/'], function (){
     Route::get('forgot-password', [ForgotController::class, 'forgot'])->name('forgot');
     Route::get('reset-password', [ForgotController::class, 'reset'])->name('resetPassword');
 });
+
 

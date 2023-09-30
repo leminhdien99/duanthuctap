@@ -492,39 +492,39 @@
                                     </ul>
                                 </li>
                                 <li class="position-static">
-                                    <a href="#">Mega menu <i class="fi-rs-angle-down"></i></a>
+                                    <a href="#">Menu<i class="fi-rs-angle-down"></i></a>
                                     <ul class="mega-menu">
                                         <li class="sub-mega-menu sub-mega-menu-width-22">
-                                            <a class="menu-title" href="#">Fruit & Vegetables</a>
+                                            <a class="menu-title" href="#">Bữa sáng no bụng</a>
                                             <ul>
-                                                <li><a href="shop-product-right.html">Meat & Poultry</a></li>
-                                                <li><a href="shop-product-right.html">Fresh Vegetables</a></li>
-                                                <li><a href="shop-product-right.html">Herbs & Seasonings</a></li>
-                                                <li><a href="shop-product-right.html">Cuts & Sprouts</a></li>
-                                                <li><a href="shop-product-right.html">Exotic Fruits & Veggies</a></li>
-                                                <li><a href="shop-product-right.html">Packaged Produce</a></li>
+                                                <li><a href="{{route('product')}}">Cơm tấm</a></li>
+                                                <li><a href="{{route('product')}}">Cơm gà xối mỡ</a></li>
+                                                <li><a href="{{route('product')}}">Cơm Chiên dương châu</a></li>
+                                                <li><a href="{{route('product')}}">Cơm gà sốt các loại</a></li>
+                                                <li><a href="{{route('product')}}">Cơm chiên (tuỳ yêu cầu của khách)</a></li>
+                                                <li><a href="{{route('product')}}">Cơm thêm , nước uống các loại</a></li>
                                             </ul>
                                         </li>
                                         <li class="sub-mega-menu sub-mega-menu-width-22">
-                                            <a class="menu-title" href="#">Breakfast & Dairy</a>
+                                            <a class="menu-title" href="#">Bữa trưa ngon miệng</a>
                                             <ul>
-                                                <li><a href="shop-product-right.html">Milk & Flavoured Milk</a></li>
-                                                <li><a href="shop-product-right.html">Butter and Margarine</a></li>
-                                                <li><a href="shop-product-right.html">Eggs Substitutes</a></li>
-                                                <li><a href="shop-product-right.html">Marmalades</a></li>
-                                                <li><a href="shop-product-right.html">Sour Cream</a></li>
-                                                <li><a href="shop-product-right.html">Cheese</a></li>
+                                                <li><a href="{{route('product')}}">Combo 3 món bữa trưa</a></li>
+                                                <li><a href="{{route('product')}}">Cá chiên sốt cà và canh bí đao</a></li>
+                                                <li><a href="{{route('product')}}">Thịt kho trứng</a></li>
+                                                <li><a href="{{route('product')}}">Tôm rang mặn</a></li>
+                                                <li><a href="{{route('product')}}">Combo full 5 món bữa trưa đầy đủ</a></li>
+                                                <li><a href="{{route('product')}}">Cơm (đồ ăn) thêm , nước uống các loại</a></li>
                                             </ul>
                                         </li>
                                         <li class="sub-mega-menu sub-mega-menu-width-22">
-                                            <a class="menu-title" href="#">Meat & Seafood</a>
+                                            <a class="menu-title" href="#">Bữa tối đầy đủ</a>
                                             <ul>
-                                                <li><a href="shop-product-right.html">Breakfast Sausage</a></li>
-                                                <li><a href="shop-product-right.html">Dinner Sausage</a></li>
-                                                <li><a href="shop-product-right.html">Chicken</a></li>
-                                                <li><a href="shop-product-right.html">Sliced Deli Meat</a></li>
-                                                <li><a href="shop-product-right.html">Wild Caught Fillets</a></li>
-                                                <li><a href="shop-product-right.html">Crab and Shellfish</a></li>
+                                                <li><a href="{{route('product')}}">Sườn xào chua ngọt</a></li>
+                                                <li><a href="{{route('product')}}">Bò xào bông cải</a></li>
+                                                <li><a href="{{route('product')}}">combo 2 món xào và canh</a></li>
+                                                <li><a href="{{route('product')}}">combo 3 món chiên , xào và canh</a></li>
+                                                <li><a href="{{route('product')}}">full 5 món bữa ăn đầy đủ</a></li>
+                                                <li><a href="{{route('product')}}">Cơm (đồ ăn) thêm , nước uống các loại</a></li>
                                             </ul>
                                         </li>
                                         <li class="sub-mega-menu sub-mega-menu-width-34">
