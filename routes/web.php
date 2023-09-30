@@ -2,16 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\Cart\CartController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::get('/', [HomeController::class, 'index']);
+
+
+Route::group(['prefix' => '/'], function (){
+    Route::get('', [HomeController::class, 'index']);
+    Route::group(['prefix' => 'cart'], function (){
+        Route::get('list', [CartController::class, 'list'])->name('listCart');
+        Route::get('add', [CartController::class, 'add'])->name('addCart');
+        Route::get('delete', [CartController::class, 'delete'])->name('deleteCart');
+
+    });
+});

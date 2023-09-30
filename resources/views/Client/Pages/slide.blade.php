@@ -1,4 +1,4 @@
-@extends('Client.index')
+@extends('Client.layout.Master')
 @section('main')
 
 <section class="home-slider position-relative mb-30">

@@ -1,4 +1,4 @@
-@extends('Client.index')
+@extends('Client.layout.Master')
 @section('main')
 
     <section class="popular-categories section-padding">
