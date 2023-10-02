@@ -1,4 +1,4 @@
-@extends('Client.index')
+@extends('Client.layout.master')
 @section('main')
     <main class="main pages">
         <div class="page-header breadcrumb-wrap">

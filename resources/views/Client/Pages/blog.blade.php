@@ -1,4 +1,4 @@
-@extends('Client.index')
+@extends('Client.layout.master')
 @section('main')
     <main class="main">
         <div class="page-header mt-30 mb-75">

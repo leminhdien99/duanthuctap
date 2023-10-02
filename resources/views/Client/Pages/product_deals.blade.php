@@ -1,4 +1,4 @@
-@extends('Client.index')
+@extends('Client.layout.master')
 @section('main')
     <div class="container mb-30">
         <div class="row">

@@ -1,4 +1,4 @@
-@extends('Client.index')
+@extends('Client.layout.master')
 @section('main')
     <section class="product-tabs section-padding position-relative">
         <div class="container">

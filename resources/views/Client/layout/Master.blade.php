@@ -12,10 +12,12 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/imgs/theme/favicon.svg')}}" />
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/main.css?v=5.6')}}" />
+    {{--Account upload anh --}}
+    <link rel="stylesheet" href="{{asset('assets/css/style_blog3.css')}}">
 </head>
 <body>
     @include('Client/Header/header');
@@ -23,6 +25,7 @@
 
     <!-- Carousel Start -->
     <div class="wapper-main">
+
        @yield('main')
     </div>
     <!-- Contact Start -->
@@ -53,5 +56,7 @@
 <!-- Template  JS -->
 <script src="{{asset('assets/js/main.js?v=5.6')}}"></script>
 <script src="{{asset('assets/js/shop.js?v=5.6')}}"></script>
+{{--upload anh account--}}
+<script src="{{asset('assets/js//upload.js')}}"></script>
 </body>
 </html>
