@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\HomeController;
-use App\Http\Controllers\Client\Cart\CartController;
-use App\Http\Controllers\Client\Account\ForgotController;
-
 use App\Http\Controllers\Client\About\AboutController;
 use App\Http\Controllers\Client\Contact\ContactController;
 use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
@@ -22,9 +19,7 @@ Route::group(['prefix' => '/'], function (){
     Route::get('contact', [ContactController::class, 'contact'])->name('contact');
     Route::get('wish-list', [ShopWishlistController::class, 'wishlist'])->name('wishlist');
     Route::get('blog-detail', [BlogDetailController::class, 'blogdetail'])->name('blogdetail');
-    Route::get('blog-new', [BlogDetailController::class, 'blognew'])->name('blognew');
     Route::get('forgot-password', [ForgotController::class, 'forgot'])->name('forgot');
     Route::get('reset-password', [ForgotController::class, 'reset'])->name('resetPassword');
 });
-
 
