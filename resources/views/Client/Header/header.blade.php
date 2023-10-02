@@ -1,4 +1,45 @@
 <!-- hiển thị thông báo  -->
+<div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <div class="deal" style="background-image: url('{{asset('assets/imgs/theme/icons/popup-1.png')}}')">
+                    <div class="deal-top">
+                        <h6 class="mb-10 text-brand-2">Deal of the Day</h6>
+                    </div>
+                    <div class="deal-content detail-info">
+                        <h4 class="product-title"><a href="shop-product-right.html" class="text-heading">Organic fruit for your family's health</a></h4>
+                        <div class="clearfix product-price-cover">
+                            <div class="product-price primary-color float-left">
+                                <span class="current-price text-brand">$38</span>
+                                <span>
+                                    <span class="save-price font-md color3 ml-15">26% Off</span>
+                                    <span class="old-price font-md ml-15">$52</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-bottom">
+                        <p class="mb-20">Hurry Up! Offer End In:</p>
+                        <div class="deals-countdown pl-5" data-countdown="2025/03/25 00:00:00">
+                            <span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> days </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> hours </span></span><span class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> mins </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> sec </span></span>
+                        </div>
+                        <div class="product-detail-rating">
+                            <div class="product-rate-cover text-end">
+                                <div class="product-rate d-inline-block">
+                                    <div class="product-rating" style="width: 90%"></div>
+                                </div>
+                                <span class="font-small ml-5 text-muted"> (32 rates)</span>
+                            </div>
+                        </div>
+                        <a href="shop-grid-right.html" class="btn hover-up">Shop Now <i class="fi-rs-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{--<div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">--}}
 {{--    <div class="modal-dialog">--}}
 {{--        <div class="modal-content">--}}
@@ -160,7 +201,7 @@
                     <div class="header-info">
                         <ul>
                             <li><a href="page-about.htlm">About Us</a></li>
-                            <li><a href="page-account.html">My Account</a></li>
+                            <li><a href="{{route('account')}}">Tài Khoản của tôi</a></li>
                             <li><a href="shop-wishlist.html">Wishlist</a></li>
                             <li><a href="shop-order.html">Order Tracking</a></li>
                         </ul>
@@ -265,7 +306,7 @@
                             </div>
                             <div class="header-action-icon-2">
                                 <a href="shop-compare.html">
-                                    <img class="svg')}}Inject" alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-compare.svg')}}" />
+                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-compare.svg" />
                                     <span class="pro-count blue">3</span>
                                 </a>
                                 <a href="shop-compare.html"><span class="lable ml-0">Compare</span></a>
@@ -329,7 +370,7 @@
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My Account</a>
+                                            <a href="{{route('account')}}"><i class="fi fi-rs-user mr-10"></i>Tài khoản của tôi</a>
                                         </li>
                                         <li>
                                             <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
@@ -430,7 +471,7 @@
                     <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
                         <nav>
                             <ul>
-                                <li class="hot-deals"><img src="{{asset('assets/imgs/theme/icons/icon-hot.svg')}}" alt="hot deals" /><a href="shop-grid-right.html">Deals</a></li>
+                                <li class="hot-deals"><img src="{{asset('assets/imgs/theme/icons/icon-hot.svg')}}" alt="hot deals" /><a href="{{route('product_deals')}}">Deals</a></li>
                                 <li>
                                     <a class="active" href="index.html">Home <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
@@ -529,6 +570,64 @@
                                         </li>
                                         <li class="sub-mega-menu sub-mega-menu-width-34">
                                             <div class="menu-banner-wrap">
+                                                <a href="shop-product-right.html"><img src="assets/imgs/banner/banner-menu.png" alt="Nest" /></a>
+                                                <div class="menu-banner-content">
+                                                    <h4>Hot deals</h4>
+                                                    <h3>
+                                                        Don't miss<br />
+                                                        Trending
+                                                    </h3>
+                                                    <div class="menu-banner-price">
+                                                        <span class="new-price text-success">Save to 50%</span>
+                                                    </div>
+                                                    <div class="menu-banner-btn">
+                                                        <a href="shop-product-right.html">Shop now</a>
+                                                    </div>
+                                                </div>
+                                                <div class="menu-banner-discount">
+                                                    <h3>
+                                                        <span>25%</span>
+                                                        off
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="blog-category-grid.html">Blog <i class="fi-rs-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Blog Category Grid</a></li>
+                                        <li><a href="#">Blog Category List</a></li>
+                                        <li><a href="{{route('blog')}}">Tin Tức Thực Phẩm</a></li>
+                                        <li><a href="#">Blog Category Wide</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="page-about.html">About Us</a></li>
+                                        <li><a href="page-contact.html">Contact</a></li>
+                                        <li><a href="{{route('account')}}">Tài khoản của tôi</a></li>
+                                        <li><a href="page-login.html">Login</a></li>
+                                        <li><a href="page-register.html">Register</a></li>
+                                        <li><a href="page-forgot-password.html">Forgot password</a></li>
+                                        <li><a href="page-reset-password.html">Reset password</a></li>
+                                        <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
+                                        <li><a href="page-privacy-policy.html">Privacy Policy</a></li>
+                                        <li><a href="page-terms.html">Terms of Service</a></li>
+                                        <li><a href="page-404.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="page-contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="hotline d-none d-lg-flex">
+                    <img src="assets/imgs/theme/icons/icon-headphone.svg" alt="hotline" />
                                                 <a href="shop-product-right.html"><img src="{{asset('assets/imgs/banner/banner-menu.png')}}" alt="Nest"/></a>
             <div class="menu-banner-content">
                 <h4>Hot deals</h4>
@@ -795,7 +894,7 @@
                             <ul class="dropdown">
                                 <li><a href="page-about.html">About Us</a></li>
                                 <li><a href="page-contact.html">Contact</a></li>
-                                <li><a href="page-account.html">My Account</a></li>
+                                <li><a href="{{route('account')}}">Tài khoản của tôi</a></li>
                                 <li><a href="page-login.html">Login</a></li>
                                 <li><a href="page-register.html">Register</a></li>
                                 <li><a href="page-forgot-password.html">Forgot password</a></li>
