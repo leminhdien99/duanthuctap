@@ -12,6 +12,10 @@ use App\Http\Controllers\Client\Blog\BlogController;
 use App\Http\Controllers\Client\Account\AccountController;
 use App\Http\Controllers\Client\Pages\PolicyController;
 use App\Http\Controllers\Client\Pages\Product\DetailsController;
+use App\Http\Controllers\Client\ErrorController;
+use App\Http\Controllers\Client\LoginController;
+use App\Http\Controllers\Client\RegisterController;
+use App\Http\Controllers\Client\CheckoutController;
 
 Route::group(['prefix' => '/'], function (){
     Route::get('', [HomeController::class, 'index'])->name('index');
@@ -28,6 +32,10 @@ Route::group(['prefix' => '/'], function (){
     });
     Route::get('details', [DetailsController::class, 'Details'])->name('details');
     Route::get('policy', [PolicyController::class, 'Policy'])->name('policy');
+    Route::get('404', [ErrorController::class, 'enror'])->name('error');
+    Route::get('login', [LoginController::class, 'login'])->name('login');
+    Route::get('register', [RegisterController::class, 'register'])->name('register');
+    Route::get('checkout', [CheckoutController::class, 'checkout'])->name('checkout');
 
     Route::get('blog', [BlogController::class, 'blog'])->name('blog');
     Route::get('account', [AccountController::class, 'account'])->name('account');
