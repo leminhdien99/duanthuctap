@@ -57,7 +57,6 @@ Route::group(['prefix' => '/'], function (){
     Route::get('login', [LoginController::class, 'login'])->name('login');
     Route::get('register', [RegisterController::class, 'register'])->name('register');
     Route::get('checkout', [CheckoutController::class, 'checkout'])->name('checkout');
-
     Route::get('blog', [BlogController::class, 'blog'])->name('blog');
     Route::get('account', [AccountController::class, 'account'])->name('account');
     Route::get('about', [AboutController::class, 'about'])->name('about');
