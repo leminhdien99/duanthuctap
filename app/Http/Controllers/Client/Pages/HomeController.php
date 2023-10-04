@@ -8,7 +8,5 @@ class HomeController extends Controller
 {
     function index(){
         return view('Client.Pages.home');
-
-
     }
 }
