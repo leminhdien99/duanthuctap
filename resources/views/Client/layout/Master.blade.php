@@ -23,16 +23,18 @@
     <link rel="stylesheet" href="{{asset('assets/css/main.css?v=5.6')}}"/>
 </head>
 <body>
-    <x-client.header.header></x-client.header.header>
+
 <!-- Navbar End -->
+<x-client.header.header></x-client.header.header>
+<x-client.navbar.navbar></x-client.navbar.navbar>
 
 <!-- Carousel Start -->
-    <div class="wapper-main">
-        @yield('main')
-    </div>
+<div class="wapper-main">
+    @yield('main')
+</div>
 <!-- Contact Start -->
-    <x-client.footer.footer></x-client.footer.footer>
-    <!-- Footer Start -->
+<x-client.footer.footer></x-client.footer.footer>
+<!-- Footer Start -->
 
 
 </body>
@@ -62,3 +64,4 @@
 <script src="{{asset('assets/js//upload.js')}}"></script>
 </body>
 </html>
+

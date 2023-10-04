@@ -1,5 +1,3 @@
-
-
 <!-- hiển thị thông báo  -->
 <div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -8,12 +6,12 @@
             <div class="modal-body">
                 <div class="deal" style="background-image: url('{{asset('assets/imgs/theme/icons/popup-1.png')}}')">
                     <div class="deal-top">
-                        <h6 class="mb-10 text-brand-2">Deal of the Day</h6>
+                        <h6 class="mb-10 text-brand-2">Giao dịch trong ngày</h6>
                     </div>
                     <div class="deal-content detail-info">
-                        <h4 class="product-title">
-                            <a href="shop-product-right.html" class="text-heading">Organic fruit for your family's health</a>
-                        </h4>
+                        <h4 class="product-title"><a href="shop-product-right.html" class="text-heading">Cơm gạo tốt
+                                nhất
+                                vì sức khỏe gia đình bạn</a></h4>
                         <div class="clearfix product-price-cover">
                             <div class="product-price primary-color float-left">
                                 <span class="current-price text-brand">$38</span>
@@ -25,9 +23,12 @@
                         </div>
                     </div>
                     <div class="deal-bottom">
-                        <p class="mb-20">Hurry Up! Offer End In:</p>
+                        <p class="mb-20">Nhanh lên! Ưu đãi kết thúc vào:</p>
                         <div class="deals-countdown pl-5" data-countdown="2025/03/25 00:00:00">
-                            <span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> days </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> hours </span></span><span class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> mins </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> sec </span></span>
+                            <span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> Ngày </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> giờ
+                                </span></span><span class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> phút
+                                </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> giây
+                                </span></span>
                         </div>
                         <div class="product-detail-rating">
                             <div class="product-rate-cover text-end">
@@ -37,7 +38,7 @@
                                 <span class="font-small ml-5 text-muted"> (32 rates)</span>
                             </div>
                         </div>
-                        <a href="shop-grid-right.html" class="btn hover-up">Shop Now
+                        <a href="shop-grid-right.html" class="btn hover-up">Mua ngay
                             <i class="fi-rs-arrow-right"></i></a>
                     </div>
                 </div>
@@ -45,50 +46,6 @@
         </div>
     </div>
 </div>
-{{--<div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">--}}
-{{--    <div class="modal-dialog">--}}
-{{--        <div class="modal-content">--}}
-{{--            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
-{{--            <div class="modal-body">--}}
-{{--                <div class="deal" style="background-image: url('{{asset('assets/imgs/banner/popup-1.png')}}')">--}}
-{{--                    <div class="deal-top">--}}
-{{--                        <h6 class="mb-10 text-brand-2">Deal of the Day</h6>--}}
-{{--                    </div>--}}
-{{--                    <div class="deal-content detail-info">--}}
-{{--                        <h4 class="product-title">--}}
-{{--                            <a href="shop-product-right.html" class="text-heading">Organic fruit for your family's health</a>--}}
-{{--                        </h4>--}}
-{{--                        <div class="clearfix product-price-cover">--}}
-{{--                            <div class="product-price primary-color float-left">--}}
-{{--                                <span class="current-price text-brand">$38</span>--}}
-{{--                                <span>--}}
-{{--                                    <span class="save-price font-md color3 ml-15">26% Off</span>--}}
-{{--                                    <span class="old-price font-md ml-15">$52</span>--}}
-{{--                                </span>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="deal-bottom">--}}
-{{--                        <p class="mb-20">Hurry Up! Offer End In:</p>--}}
-{{--                        <div class="deals-countdown pl-5" data-countdown="2025/03/25 00:00:00">--}}
-{{--                            <span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> days </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> hours </span></span><span class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> mins </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> sec </span></span>--}}
-{{--                        </div>--}}
-{{--                        <div class="product-detail-rating">--}}
-{{--                            <div class="product-rate-cover text-end">--}}
-{{--                                <div class="product-rate d-inline-block">--}}
-{{--                                    <div class="product-rating" style="width: 90%"></div>--}}
-{{--                                </div>--}}
-{{--                                <span class="font-small ml-5 text-muted"> (32 rates)</span>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <a href="shop-grid-right.html" class="btn hover-up">Shop Now--}}
-{{--                            <i class="fi-rs-arrow-right"></i></a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
 
 <div class="modal fade custom-modal" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -145,10 +102,10 @@
                     </div>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="detail-info pr-30 pl-30">
-                            <span class="stock-status out-stock"> Sale Off </span>
-                            <h3 class="title-detail">
-                                <a href="shop-product-right.html" class="text-heading">Seeds of Change Organic Quinoa, Brown</a>
-                            </h3>
+                            <span class="stock-status out-stock"> Khuyến mãi </span>
+                            <h3 class="title-detail"><a href="shop-product-right.html" class="text-heading">Hạt giống
+                                    của
+                                    Thay đổi Quinoa hữu cơ, màu nâu</a></h3>
                             <div class="product-detail-rating">
                                 <div class="product-rate-cover text-end">
                                     <div class="product-rate d-inline-block">
@@ -174,7 +131,7 @@
                                 </div>
                                 <div class="product-extra-link2">
                                     <button type="submit" class="button button-add-to-cart">
-                                        <i class="fi-rs-shopping-cart"></i>Add to cart
+                                        <i class="fi-rs-shopping-cart"></i>Thêm vào giỏ hàng
                                     </button>
                                 </div>
                             </div>
@@ -191,13 +148,10 @@
             </div>
         </div>
     </div>
-</div><!--Kết thúc hiển thị thông báo  -->
-
-
-<!-- Cấu trúc phần header -->
+</div><!--Kết thúc hiển thị thông báo  --><!-- Cấu trúc phần header -->
 <header class="header-area header-style-1 header-height-2">
     <div class="mobile-promotion">
-        <span>Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left</span>
+        <span>Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 Ngày</strong> left</span>
     </div>
     <div class="header-top header-top-ptb-1 d-none d-lg-block">
         <div class="container">
@@ -205,10 +159,10 @@
                 <div class="col-xl-3 col-lg-4">
                     <div class="header-info">
                         <ul>
-                            <li><a href="page-about.htlm">About Us</a></li>
-                            <li><a href="{{route('account')}}">Tài Khoản của tôi</a></li>
-                            <li><a href="shop-wishlist.html">Wishlist</a></li>
-                            <li><a href="shop-order.html">Order Tracking</a></li>
+                            <li><a href="page-about.htlm">Về chúng tôi</a></li>
+                            <li><a href="page-account.html">Tài khoản của tôi</a></li>
+                            <li><a href="shop-wishlist.html">Danh sách yêu thích</a></li>
+                            <li><a href="shop-order.html">Theo dõi đơn hàng</a></li>
                         </ul>
                     </div>
                 </div>
@@ -216,9 +170,7 @@
                     <div class="text-center">
                         <div id="news-flash" class="d-inline-block">
                             <ul>
-                                <li>100% Secure delivery without contacting the courier</li>
-                                <li>Supper Value Deals - Save more with coupons</li>
-                                <li>Trendy 25silver jewelry, save up 35% off today</li>
+                                <li>Khuyến mãi mua 1 tặng 1 mỗi thứ 6 hàng tuần</li>
                             </ul>
                         </div>
                     </div>
@@ -226,7 +178,7 @@
                 <div class="col-xl-3 col-lg-4">
                     <div class="header-info header-info-right">
                         <ul>
-                            <li>Need help? Call Us: <strong class="text-brand"> + 1800 900</strong></li>
+                            <li>Liên hệ: <strong class="text-brand"> + 1800 900</strong></li>
                             <li>
                                 <a class="language-dropdown-active" href="#">English
                                     <i class="fi-rs-angle-small-down"></i></a>
@@ -266,69 +218,41 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="index.html"><img src="{{asset('assets/imgs/theme/logo.svg')}}" alt="logo" /></a>
+                    <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo"/></a>
                 </div>
                 <div class="header-right">
                     <div class="search-style-2">
                         <form action="#">
                             <select class="select-active">
-                                <option>All Categories</option>
-                                <option>Milks and Dairies</option>
-                                <option>Wines & Alcohol</option>
-                                <option>Clothing & Beauty</option>
-                                <option>Pet Foods & Toy</option>
-                                <option>Fast food</option>
-                                <option>Baking material</option>
-                                <option>Vegetables</option>
-                                <option>Fresh Seafood</option>
-                                <option>Noodles & Rice</option>
-                                <option>Ice cream</option>
+                                <option>Danh mục</option>
+                                <option>Cơm và các sản phẩm từ cơm</option>
                             </select>
-                            <input type="text" placeholder="Search for items..."/>
+                            <input type="text" placeholder="
+                            Tìm kiếm các mục..."/>
                         </form>
                     </div>
                     <div class="header-action-right">
                         <div class="header-action-2">
-                            <div class="search-location">
-                                <form action="#">
-                                    <select class="select-active">
-                                        <option>Your Location</option>
-                                        <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>Arizona</option>
-                                        <option>Delaware</option>
-                                        <option>Florida</option>
-                                        <option>Georgia</option>
-                                        <option>Hawaii</option>
-                                        <option>Indiana</option>
-                                        <option>Maryland</option>
-                                        <option>Nevada</option>
-                                        <option>New Jersey</option>
-                                        <option>New Mexico</option>
-                                        <option>New York</option>
-                                    </select>
-                                </form>
-                            </div>
                             <div class="header-action-icon-2">
                                 <a href="shop-compare.html">
                                     <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-compare.svg"/>
                                     <span class="pro-count blue">3</span>
                                 </a>
-                                <a href="shop-compare.html"><span class="lable ml-0">Compare</span></a>
+                                <a href="shop-compare.html"><span class="lable ml-0">So sánh</span></a>
                             </div>
                             <div class="header-action-icon-2">
                                 <a href="shop-wishlist.html">
-                                    <img class="svg')}}Inject" alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-heart.svg')}}" />
+                                    <img class="svgInject" alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-heart.svg')}}"/>
                                     <span class="pro-count blue">6</span>
                                 </a>
-                                <a href="shop-wishlist.html"><span class="lable">Wishlist</span></a>
+                                <a href="shop-wishlist.html"><span class="lable">Danh sách yêu thích</span></a>
                             </div>
                             <div class="header-action-icon-2">
                                 <a class="mini-cart-icon" href="shop-cart.html">
-                                    <img alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-cart.svg')}}" />
+                                    <img alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-cart.svg')}}"/>
                                     <span class="pro-count blue">2</span>
                                 </a>
-                                <a href="shop-cart.html"><span class="lable">Cart</span></a>
+                                <a href="shop-cart.html"><span class="lable">Giỏ hàng</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2">
                                     <ul>
                                         <li>
@@ -358,525 +282,88 @@
                                     </ul>
                                 </div>
 
-                                    <div class="shopping-cart-footer">
-                                        <div class="shopping-cart-total">
-                                            <h4>Total <span>$4000.00</span></h4>
-                                        </div>
-                                        <div class="shopping-cart-button">
-                                            <a href="shop-cart.html" class="outline">View cart</a>
-                                            <a href="shop-checkout.html">Checkout</a>
-                                        </div>
+                                <div class="shopping-cart-footer">
+                                    <div class="shopping-cart-total">
+                                        <h4>Total <span>$4000.00</span></h4>
                                     </div>
-
-                            <div class="header-action-icon-2">
-                                <a href="page-account.html">
-                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-user.svg"/>
-                                                <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/imgs/shop/thumbnail-3.jpg')}}"/></a>
-                            </div>
-                            </div>
-                <div class="shopping-cart-title">
-                    <h4><a href="shop-product-right.html">Daisy Casual Bag</a></h4>
-                    <h4><span>1 × </span>$800.00</h4>
-                </div>
-                <div class="shopping-cart-delete">
-                    <a href="#"><i class="fi-rs-cross-small"></i></a>
-                </div>
-                </li>
-                <li>
-                    <div class="shopping-cart-img">
-                        <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/imgs/shop/thumbnail-2.jpg')}}"/></a>
-                    </div>
-                    <div class="shopping-cart-title">
-                        <h4><a href="shop-product-right.html">Corduroy Shirts</a></h4>
-                        <h4><span>1 × </span>$3200.00</h4>
-                    </div>
-                    <div class="shopping-cart-delete">
-                        <a href="#"><i class="fi-rs-cross-small"></i></a>
-                    </div>
-                </li>
-                </ul>
-                <div class="shopping-cart-footer">
-                    <div class="shopping-cart-total">
-                        <h4>Total <span>$4000.00</span></h4>
-                    </div>
-                    <div class="shopping-cart-button">
-                        <a href="shop-cart.html" class="outline">View cart</a>
-                        <a href="shop-checkout.html">Checkout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-action-icon-2">
-            <a href="page-account.html">
-                <img class="svg')}}Inject" alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-user.svg')}}" />
-                                </a>
-                                <a href="page-account.html"><span class="lable ml-0">Account</span></a>
-                                <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
-                                    <ul>
-                                        <li>
-                                            <a href="{{route('account')}}"><i class="fi fi-rs-user mr-10"></i>Tài khoản của tôi</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>My Voucher</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>
-                                        </li>
-                                    </ul>
+                                    <div class="shopping-cart-button">
+                                        <a href="shop-cart.html" class="outline">View cart</a>
+                                        <a href="shop-checkout.html">Checkout</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="header-bottom header-bottom-bg-color sticky-bar">
-        <div class="container">
-            <div class="header-wrap header-space-between position-relative">
-                <div class="logo logo-width-1 d-block d-lg-none">
-                     <a href="index.html"><img src="{{asset('assets/imgs/theme/logo.svg')}}" alt="logo" /></a>
-                </div>
-                <div class="header-nav d-none d-lg-flex">
-                    <div class="main-categori-wrap d-none d-lg-block">
-                        <a class="categories-button-active" href="#">
-                            <span class="fi-rs-apps"></span> <span class="et">Browse</span> All Categories
-                            <i class="fi-rs-angle-down"></i>
-                        </a>
-                        <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
-                            <div class="d-flex categori-dropdown-inner">
-                                <ul>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-1.svg')}}" alt="" />Milks and Dairies</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-2.svg')}}" alt="" />Clothing & beauty</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-3.svg')}}" alt="" />Pet Foods & Toy</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-4.svg')}}" alt="" />Baking material</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-5.svg')}}" alt="" />Fresh Fruit</a>
-                                    </li>
-                                </ul>
-                                <ul class="end">
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-6.svg')}}" alt="" />Wines & Drinks</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-7.svg')}}" alt="" />Fresh Seafood</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-8.svg')}}" alt="" />Fast food</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-9.svg')}}" alt="" />Vegetables</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/category-10.svg')}}" alt="" />Bread and Juice</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="more_slide_open" style="display: none">
-                                <div class="d-flex categori-dropdown-inner">
-                                    <ul>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/icon-1.svg')}}" alt="" />Milks and Dairies</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/icon-2.svg')}}" alt="" />Clothing & beauty</a>
-                                        </li>
-                                    </ul>
-                                    <ul class="end">
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/icon-3.svg')}}" alt="" />Wines & Drinks</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-grid-right.html"> <img src="{{asset('assets/imgs/theme/icons/icon-4.svg')}}" alt="" />Fresh Seafood</a>
-                                        </li>
-                                    </ul>
+
+                                <div class="header-action-icon-2">
+                                    <a href="shop-product-right.html">
+                                        <img alt="Nest" src="{{asset('assets/imgs/shop/thumbnail-3.jpg')}}"/></a>
                                 </div>
-                            </div>
-                            <div class="more_categories"><span class="icon"></span>
-                                <span class="heading-sm-1">Show more...</span></div>
-                        </div>
-                    </div>
-                    <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
-                        <nav>
-                            <ul>
-                                <li class="hot-deals"><img src="{{asset('assets/imgs/theme/icons/icon-hot.svg')}}" alt="hot deals" /><a href="{{route('product_deals')}}">Deals</a></li>
-                                <li>
-                                    <a class="active" href="index.html">Home <i class="fi-rs-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                        <li><a href="index-3.html">Home 3</a></li>
-                                        <li><a href="index-4.html">Home 4</a></li>
-                                        <li><a href="index-5.html">Home 5</a></li>
-                                        <li><a href="index-6.html">Home 6</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="page-about.html">About</a>
-                                </li>
-                                <li>
-                                    <a href="shop-grid-right.html">Shop <i class="fi-rs-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="shop-grid-right.html">Shop Grid – Right Sidebar</a></li>
-                                        <li><a href="shop-grid-left.html">Shop Grid – Left Sidebar</a></li>
-                                        <li><a href="shop-list-right.html">Shop List – Right Sidebar</a></li>
-                                        <li><a href="shop-list-left.html">Shop List – Left Sidebar</a></li>
-                                        <li><a href="shop-fullwidth.html">Shop - Wide</a></li>
-                                        <li>
-                                            <a href="#">Single Product <i class="fi-rs-angle-right"></i></a>
-                                            <ul class="level-menu">
-                                                <li><a href="shop-product-right.html">Product – Right Sidebar</a></li>
-                                                <li><a href="shop-product-left.html">Product – Left Sidebar</a></li>
-                                                <li><a href="shop-product-full.html">Product – No sidebar</a></li>
-                                                <li><a href="shop-product-vendor.html">Product – Vendor Info</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="shop-filter.html">Shop – Filter</a></li>
-                                        <li><a href="shop-wishlist.html">Shop – Wishlist</a></li>
-                                        <li><a href="shop-cart.html">Shop – Cart</a></li>
-                                        <li><a href="shop-checkout.html">Shop – Checkout</a></li>
-                                        <li><a href="shop-compare.html">Shop – Compare</a></li>
-                                        <li>
-                                            <a href="#">Shop Invoice<i class="fi-rs-angle-right"></i></a>
-                                            <ul class="level-menu">
-                                                <li><a href="shop-invoice-1.html">Shop Invoice 1</a></li>
-                                                <li><a href="shop-invoice-2.html">Shop Invoice 2</a></li>
-                                                <li><a href="shop-invoice-3.html">Shop Invoice 3</a></li>
-                                                <li><a href="shop-invoice-4.html">Shop Invoice 4</a></li>
-                                                <li><a href="shop-invoice-5.html">Shop Invoice 5</a></li>
-                                                <li><a href="shop-invoice-6.html">Shop Invoice 6</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Vendors <i class="fi-rs-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="vendors-grid.html">Vendors Grid</a></li>
-                                        <li><a href="vendors-list.html">Vendors List</a></li>
-                                        <li><a href="vendor-details-1.html">Vendor Details 01</a></li>
-                                        <li><a href="vendor-details-2.html">Vendor Details 02</a></li>
-                                        <li><a href="vendor-dashboard.html">Vendor Dashboard</a></li>
-                                        <li><a href="vendor-guide.html">Vendor Guide</a></li>
-                                    </ul>
-                                </li>
-                                <li class="position-static">
-                                    <a href="#">Menu<i class="fi-rs-angle-down"></i></a>
-                                    <ul class="mega-menu">
-                                        <li class="sub-mega-menu sub-mega-menu-width-22">
-                                            <a class="menu-title" href="#">Bữa sáng no bụng</a>
-                                            <ul>
-                                                <li><a href="{{route('product')}}">Cơm tấm</a></li>
-                                                <li><a href="{{route('product')}}">Cơm gà xối mỡ</a></li>
-                                                <li><a href="{{route('product')}}">Cơm Chiên dương châu</a></li>
-                                                <li><a href="{{route('product')}}">Cơm gà sốt các loại</a></li>
-                                                <li><a href="{{route('product')}}">Cơm chiên (tuỳ yêu cầu của khách)</a></li>
-                                                <li><a href="{{route('product')}}">Cơm thêm , nước uống các loại</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="sub-mega-menu sub-mega-menu-width-22">
-                                            <a class="menu-title" href="#">Bữa trưa ngon miệng</a>
-                                            <ul>
-                                                <li><a href="{{route('product')}}">Combo 3 món bữa trưa</a></li>
-                                                <li><a href="{{route('product')}}">Cá chiên sốt cà và canh bí đao</a></li>
-                                                <li><a href="{{route('product')}}">Thịt kho trứng</a></li>
-                                                <li><a href="{{route('product')}}">Tôm rang mặn</a></li>
-                                                <li><a href="{{route('product')}}">Combo full 5 món bữa trưa đầy đủ</a></li>
-                                                <li><a href="{{route('product')}}">Cơm (đồ ăn) thêm , nước uống các loại</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="sub-mega-menu sub-mega-menu-width-22">
-                                            <a class="menu-title" href="#">Bữa tối đầy đủ</a>
-                                            <ul>
-                                                <li><a href="{{route('product')}}">Sườn xào chua ngọt</a></li>
-                                                <li><a href="{{route('product')}}">Bò xào bông cải</a></li>
-                                                <li><a href="{{route('product')}}">combo 2 món xào và canh</a></li>
-                                                <li><a href="{{route('product')}}">combo 3 món chiên , xào và canh</a></li>
-                                                <li><a href="{{route('product')}}">full 5 món bữa ăn đầy đủ</a></li>
-                                                <li><a href="{{route('product')}}">Cơm (đồ ăn) thêm , nước uống các loại</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="sub-mega-menu sub-mega-menu-width-34">
-                                            <div class="menu-banner-wrap">
-                                                <a href="shop-product-right.html"><img src="assets/imgs/banner/banner-menu.png" alt="Nest"/></a>
-                                                <div class="menu-banner-content">
-                                                    <h4>Hot deals</h4>
-                                                    <h3>
-                                                        Don't miss<br/>
-                                                        Trending </h3>
-                                                    <div class="menu-banner-price">
-                                                        <span class="new-price text-success">Save to 50%</span>
-                                                    </div>
-                                                    <div class="menu-banner-btn">
-                                                        <a href="shop-product-right.html">Shop now</a>
-                                                    </div>
-                                                </div>
-                                                <div class="menu-banner-discount">
-                                                    <h3>
-                                                        <span>25%</span>
-                                                        off </h3>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="blog-category-grid.html">Blog <i class="fi-rs-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Blog Category Grid</a></li>
-                                        <li><a href="#">Blog Category List</a></li>
-                                        <li><a href="{{route('blog')}}">Tin Tức Thực Phẩm</a></li>
-                                        <li><a href="#">Blog Category Wide</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-contact.html">Contact</a></li>
-                                        <li><a href="{{route('account')}}">Tài khoản của tôi</a></li>
-                                        <li><a href="page-login.html">Login</a></li>
-                                        <li><a href="page-register.html">Register</a></li>
-                                        <li><a href="page-forgot-password.html">Forgot password</a></li>
-                                        <li><a href="page-reset-password.html">Reset password</a></li>
-                                        <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                                        <li><a href="page-privacy-policy.html">Privacy Policy</a></li>
-                                        <li><a href="page-terms.html">Terms of Service</a></li>
-                                        <li><a href="page-404.html">404 Page</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="page-contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="hotline d-none d-lg-flex">
-                    <img src="assets/imgs/theme/icons/icon-headphone.svg" alt="hotline" />
-                                                <a href="shop-product-right.html"><img src="{{asset('assets/imgs/banner/banner-menu.png')}}" alt="Nest"/></a>
-            <div class="menu-banner-content">
-                <h4>Hot deals</h4>
-                <h3>
-                    Don't miss<br/>
-                    Trending </h3>
-                <div class="menu-banner-price">
-                    <span class="new-price text-success">Save to 50%</span>
-                </div>
-                <div class="menu-banner-btn">
-                    <a href="shop-product-right.html">Shop now</a>
-                </div>
-            </div>
-            <div class="menu-banner-discount">
-                <h3>
-                    <span>25%</span>
-                    off </h3>
-            </div>
-        </div>
-        </li>
-        </ul>
-        </li>
-        <li>
-            <a href="blog-category-grid.html">Blog <i class="fi-rs-angle-down"></i></a>
-            <ul class="sub-menu">
-                <li><a href="blog-category-grid.html">Blog Category Grid</a></li>
-                <li><a href="blog-category-list.html">Blog Category List</a></li>
-                <li><a href="blog-category-big.html">Blog Category Big</a></li>
-                <li><a href="blog-category-fullwidth.html">Blog Category Wide</a></li>
-                <li>
-                    <a href="#">Single Post <i class="fi-rs-angle-right"></i></a>
-                    <ul class="level-menu level-menu-modify">
-                        <li><a href="blog-post-left.html">Left Sidebar</a></li>
-                        <li><a href="blog-post-right.html">Right Sidebar</a></li>
-                        <li><a href="blog-post-fullwidth.html">No Sidebar</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
-            <ul class="sub-menu">
-                <li><a href="page-about.html">About Us</a></li>
-                <li><a href="page-contact.html">Contact</a></li>
-                <li><a href="page-account.html">My Account</a></li>
-                <li><a href="page-login.html">Login</a></li>
-                <li><a href="page-register.html">Register</a></li>
-                <li><a href="page-forgot-password.html">Forgot password</a></li>
-                <li><a href="page-reset-password.html">Reset password</a></li>
-                <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                <li><a href="page-privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="page-terms.html">Terms of Service</a></li>
-                <li><a href="page-404.html">404 Page</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="page-contact.html">Contact</a>
-        </li>
-        </ul>
-        </nav>
-    </div>
-    </div>
-    <div class="hotline d-none d-lg-flex">
-        <img src="{{asset('assets/imgs/theme/icons/icon-headphone.svg')}}" alt="hotline" />
-                                        <li><a href="blog-category-grid.html">Blog Category Grid</a></li>
-                                        <li><a href="blog-category-list.html">Blog Category List</a></li>
-                                        <li><a href="blog-category-big.html">Blog Category Big</a></li>
-                                        <li><a href="blog-category-fullwidth.html">Blog Category Wide</a></li>
-                                        <li>
-                                            <a href="#">Single Post <i class="fi-rs-angle-right"></i></a>
-                                            <ul class="level-menu level-menu-modify">
-                                                <li><a href="blog-post-left.html">Left Sidebar</a></li>
-                                                <li><a href="blog-post-right.html">Right Sidebar</a></li>
-                                                <li><a href="blog-post-fullwidth.html">No Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="page-about.html">About Us</a></li>
-                                        <li><a href="page-contact.html">Contact</a></li>
-                                        <li><a href="page-account.html">My Account</a></li>
-                                        <li><a href="page-login.html">Login</a></li>
-                                        <li><a href="page-register.html">Register</a></li>
-                                        <li><a href="page-forgot-password.html">Forgot password</a></li>
-                                        <li><a href="page-reset-password.html">Reset password</a></li>
-                                        <li><a href="page-purchase-guide.html">Purchase Guide</a></li>
-                                        <li><a href="page-privacy-policy.html">Privacy Policy</a></li>
-                                        <li><a href="page-terms.html">Terms of Service</a></li>
-                                        <li><a href="page-404.html">404 Page</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="page-contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="hotline d-none d-lg-flex">
-                    <img src="assets/imgs/theme/icons/icon-headphone.svg" alt="hotline"/>
-                    <p>1900 - 888<span>24/7 Support Center</span></p>
-                </div>
-                <div class="header-action-icon-2 d-block d-lg-none">
-                    <div class="burger-icon burger-icon-white">
-                        <span class="burger-icon-top"></span>
-                        <span class="burger-icon-mid"></span>
-                        <span class="burger-icon-bottom"></span>
-                    </div>
-                </div>
-                <div class="header-action-right d-block d-lg-none">
-                    <div class="header-action-2">
-                        <div class="header-action-icon-2">
-                            <a href="shop-wishlist.html">
 
-                                <img alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-heart.svg')}}" />
-                                <span class="pro-count white">4</span>
-                            </a>
-                        </div>
-                        <div class="header-action-icon-2">
-                            <a class="mini-cart-icon" href="#">
-
-                                <img alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-cart.svg')}}" />
-                                <span class="pro-count white">2</span>
-                            </a>
-                            <div class="cart-dropdown-wrap cart-dropdown-hm2">
-                                <ul>
-                                    <li>
-                                        <div class="shopping-cart-img">
-                                            <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg"/></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h4><a href="shop-product-right.html">Plain Striola Shirts</a></h4>
-                                            <h3><span>1 × </span>$800.00</h3>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="shopping-cart-img">
-                                            <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-4.jpg"/></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h4><a href="shop-product-right.html">Macbook Pro 2022</a></h4>
-                                            <h3><span>1 × </span>$3500.00</h3>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                        </div>
-                                    </li>
+                                <div class="shopping-cart-title">
+                                    <h4><a href="shop-product-right.html">Daisy Casual Bag</a></h4>
+                                    <h4><span>1 × </span>$800.00</h4>
+                                </div>
+                                <div class="shopping-cart-delete">
+                                    <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="shopping-cart-img">
+                                        <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/imgs/shop/thumbnail-2.jpg')}}"/></a>
+                                    </div>
+                                    <div class="shopping-cart-title">
+                                        <h4><a href="shop-product-right.html">Corduroy Shirts</a></h4>
+                                        <h4><span>1 × </span>$3200.00</h4>
+                                    </div>
+                                    <div class="shopping-cart-delete">
+                                        <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                    </div>
+                                </li>
                                 </ul>
                                 <div class="shopping-cart-footer">
                                     <div class="shopping-cart-total">
-                                        <h4>Total <span>$383.00</span></h4>
+                                        <h4>Total <span>$4000.00</span></h4>
                                     </div>
                                     <div class="shopping-cart-button">
-                                        <a href="shop-cart.html">View cart</a>
+                                        <a href="shop-cart.html" class="outline">View cart</a>
                                         <a href="shop-checkout.html">Checkout</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="header-action-icon-2">
+                            <a href="page-account.html">
+                                <img class="svg')}}Inject" alt="Nest" src="{{asset('assets/imgs/theme/icons/icon-user.svg')}}"/>
+                            </a>
+                            <a href="page-account.html"><span class="lable ml-0">Tài khoản</span></a>
+                            <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My
+                                            Tài khoản</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Theo dõi đơn hàng</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>Voucher
+                                            của tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>Danh sách
+                                            yêu thích</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>Cài đặt</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-                                            <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/imgs/shop/thumbnail-3.jpg')}}"/></a>
-    </div>
-    <div class="shopping-cart-title">
-        <h4><a href="shop-product-right.html">Plain Striola Shirts</a></h4>
-        <h3><span>1 × </span>$800.00</h3>
-    </div>
-    <div class="shopping-cart-delete">
-        <a href="#"><i class="fi-rs-cross-small"></i></a>
-    </div>
-    </li>
-    <li>
-        <div class="shopping-cart-img">
-            <a href="shop-product-right.html"><img alt="Nest" src="{{asset('assets/imgs/shop/thumbnail-4.jpg')}}"/></a>
-        </div>
-        <div class="shopping-cart-title">
-            <h4><a href="shop-product-right.html">Macbook Pro 2022</a></h4>
-            <h3><span>1 × </span>$3500.00</h3>
-        </div>
-        <div class="shopping-cart-delete">
-            <a href="#"><i class="fi-rs-cross-small"></i></a>
-        </div>
-    </li>
-    </ul>
-    <div class="shopping-cart-footer">
-        <div class="shopping-cart-total">
-            <h4>Total <span>$383.00</span></h4>
-        </div>
-        <div class="shopping-cart-button">
-            <a href="shop-cart.html">View cart</a>
-            <a href="shop-checkout.html">Checkout</a>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
     </div>
     </div>
 </header>
@@ -885,7 +372,7 @@
     <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-top">
             <div class="mobile-header-logo">
-                <a href="index.html"><img src="{{asset('assets/imgs/theme/logo.svg')}}" alt="logo" /></a>
+                <a href="index.html"><img src="{{asset('assets/imgs/theme/logo.svg')}}" alt="logo"/></a>
             </div>
             <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
                 <button class="close-style search-close">
@@ -906,111 +393,57 @@
                 <nav>
                     <ul class="mobile-menu font-heading">
                         <li class="menu-item-has-children">
-                            <a href="index.html">Home</a>
-                            <ul class="dropdown">
-                                <li><a href="index.html">Home 1</a></li>
-                                <li><a href="index-2.html">Home 2</a></li>
-                                <li><a href="index-3.html">Home 3</a></li>
-                                <li><a href="index-4.html">Home 4</a></li>
-                                <li><a href="index-5.html">Home 5</a></li>
-                                <li><a href="index-6.html">Home 6</a></li>
-                            </ul>
+                            <a href="index.html">Trang chủ</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="shop-grid-right.html">shop</a>
+                            <a href="shop-grid-right.html">Sản phẩm</a>
                             <ul class="dropdown">
-                                <li><a href="shop-grid-right.html">Shop Grid – Right Sidebar</a></li>
-                                <li><a href="shop-grid-left.html">Shop Grid – Left Sidebar</a></li>
-                                <li><a href="shop-list-right.html">Shop List – Right Sidebar</a></li>
-                                <li><a href="shop-list-left.html">Shop List – Left Sidebar</a></li>
-                                <li><a href="shop-fullwidth.html">Shop - Wide</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Single Product</a>
-                                    <ul class="dropdown">
-                                        <li><a href="shop-product-right.html">Product – Right Sidebar</a></li>
-                                        <li><a href="shop-product-left.html">Product – Left Sidebar</a></li>
-                                        <li><a href="shop-product-full.html">Product – No sidebar</a></li>
-                                        <li><a href="shop-product-vendor.html">Product – Vendor Infor</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop-filter.html">Shop – Filter</a></li>
-                                <li><a href="shop-wishlist.html">Shop – Wishlist</a></li>
-                                <li><a href="shop-cart.html">Shop – Cart</a></li>
-                                <li><a href="shop-checkout.html">Shop – Checkout</a></li>
-                                <li><a href="shop-compare.html">Shop – Compare</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Shop Invoice</a>
-                                    <ul class="dropdown">
-                                        <li><a href="shop-invoice-1.html">Shop Invoice 1</a></li>
-                                        <li><a href="shop-invoice-2.html">Shop Invoice 2</a></li>
-                                        <li><a href="shop-invoice-3.html">Shop Invoice 3</a></li>
-                                        <li><a href="shop-invoice-4.html">Shop Invoice 4</a></li>
-                                        <li><a href="shop-invoice-5.html">Shop Invoice 5</a></li>
-                                        <li><a href="shop-invoice-6.html">Shop Invoice 6</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="shop-grid-right.html">Cơm gà </a></li>
                             </ul>
+                        </li>
+
+                        <li><a href="shop-filter.html">Cơm chay</a></li>
+
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Vendors</a>
-                            <ul class="dropdown">
-                                <li><a href="vendors-grid.html">Vendors Grid</a></li>
-                                <li><a href="vendors-list.html">Vendors List</a></li>
-                                <li><a href="vendor-details-1.html">Vendor Details 01</a></li>
-                                <li><a href="vendor-details-2.html">Vendor Details 02</a></li>
-                                <li><a href="vendor-dashboard.html">Vendor Dashboard</a></li>
-                                <li><a href="vendor-guide.html">Vendor Guide</a></li>
-                            </ul>
+                            <a href="#">Giới thiệu</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Mega menu</a>
-                            <ul class="dropdown">
-                                <li class="menu-item-has-children">
-                                    <a href="#">Women's Fashion</a>
-                                    <ul class="dropdown">
-                                        <li><a href="shop-product-right.html">Dresses</a></li>
-                                        <li><a href="shop-product-right.html">Blouses & Shirts</a></li>
-                                        <li><a href="shop-product-right.html">Hoodies & Sweatshirts</a></li>
-                                        <li><a href="shop-product-right.html">Women's Sets</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Men's Fashion</a>
-                                    <ul class="dropdown">
-                                        <li><a href="shop-product-right.html">Jackets</a></li>
-                                        <li><a href="shop-product-right.html">Casual Faux Leather</a></li>
-                                        <li><a href="shop-product-right.html">Genuine Leather</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Technology</a>
-                                    <ul class="dropdown">
-                                        <li><a href="shop-product-right.html">Gaming Laptops</a></li>
-                                        <li><a href="shop-product-right.html">Ultraslim Laptops</a></li>
-                                        <li><a href="shop-product-right.html">Tablets</a></li>
-                                        <li><a href="shop-product-right.html">Laptop Accessories</a></li>
-                                        <li><a href="shop-product-right.html">Tablet Accessories</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <a href="#">Bài viết</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="blog-category-fullwidth.html">Blog</a>
+                            <a href="#">Liên hệ</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Thực đơn</a>
                             <ul class="dropdown">
-                                <li><a href="blog-category-grid.html">Blog Category Grid</a></li>
-                                <li><a href="blog-category-list.html">Blog Category List</a></li>
-                                <li><a href="blog-category-big.html">Blog Category Big</a></li>
-                                <li><a href="blog-category-fullwidth.html">Blog Category Wide</a></li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Single Product Layout</a>
+                                    <a href="#">Cơm chay</a>
                                     <ul class="dropdown">
-                                        <li><a href="blog-post-left.html">Left Sidebar</a></li>
-                                        <li><a href="blog-post-right.html">Right Sidebar</a></li>
-                                        <li><a href="blog-post-fullwidth.html">No Sidebar</a></li>
+                                        <li><a href="shop-product-right.html">Cơm canh cải</a></li>
+                                        <li><a href="shop-product-right.html">Cơm tàu hủ chiên</a></li>
+                                        <li><a href="shop-product-right.html">Cơm nấm</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Cơm gà</a>
+                                    <ul class="dropdown">
+                                        <li><a href="shop-product-right.html">Cơm gà nướng</a></li>
+                                        <li><a href="shop-product-right.html">Cơm cánh gà</a></li>
+                                        <li><a href="shop-product-right.html">Cơm chân gà </a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Cơm thịt heo</a>
+                                    <ul class="dropdown">
+                                        <li><a href="shop-product-right.html">Thịt ba rọi</a></li>
+                                        <li><a href="shop-product-right.html">Thịt sườn</a></li>
+                                        <li><a href="shop-product-right.html">Thịt heo chiên</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
+
                         <li class="menu-item-has-children">
                             <a href="#">Pages</a>
                             <ul class="dropdown">
@@ -1042,27 +475,23 @@
             </div>
             <div class="mobile-header-info-wrap">
                 <div class="single-mobile-header-info">
-                    <a href="page-contact.html"><i class="fi-rs-marker"></i> Our location </a>
+                    <a href="page-contact.html"><i class="fi-rs-marker"></i> Địa điểm của chúng tôi </a>
                 </div>
                 <div class="single-mobile-header-info">
-                    <a href="page-login.html"><i class="fi-rs-user"></i>Log In / Sign Up </a>
+                    <a href="page-login.html"><i class="fi-rs-user"></i>Đăng nhập / Đăng xuất </a>
                 </div>
                 <div class="single-mobile-header-info">
                     <a href="#"><i class="fi-rs-headphones"></i>(+01) - 2345 - 6789 </a>
                 </div>
             </div>
             <div class="mobile-social-icon mb-50">
-                <h6 class="mb-15">Follow Us</h6>
-                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-facebook-white.svg')}}" alt="" /></a>
-                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-twitter-white.svg')}}" alt="" /></a>
-                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-instagram-white.svg')}}" alt="" /></a>
-                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-pinterest-white.svg')}}" alt="" /></a>
-                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-youtube-white.svg')}}" alt="" /></a>
+                <h6 class="mb-15">Theo dõi</h6>
+                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-facebook-white.svg')}}" alt=""/></a>
+                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-twitter-white.svg')}}" alt=""/></a>
+                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-instagram-white.svg')}}" alt=""/></a>
+                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-pinterest-white.svg')}}" alt=""/></a>
+                <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-youtube-white.svg')}}" alt=""/></a>
             </div>
-            <div class="site-copyright">Copyright 2022 © Nest. All rights reserved. Powered by AliThemes.</div>
         </div>
     </div>
-</div>
-<!--Kết thúc cấu trúc phần header  -->
-
-
+</div><!--Kết thúc cấu trúc phần header  -->
