@@ -7,7 +7,6 @@ use App\Http\Controllers\Admin\Category\AddCategoryController;
 use App\Http\Controllers\Admin\Category\DeleteCategoryController;
 use App\Http\Controllers\Admin\Category\EditCategoryController;
 use App\Http\Controllers\Admin\Category\ListCategoryController;
-
 use App\Http\Controllers\Client\About\AboutController;
 use App\Http\Controllers\Client\Contact\ContactController;
 use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;

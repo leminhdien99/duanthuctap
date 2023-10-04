@@ -6,7 +6,7 @@
                     <div class="single-header style-2">
                         <div class="row">
                             <div class="col-xl-10 col-lg-12 m-auto">
-                                <h6 class="mb-10"><a href="#">Recipes</a></h6>
+                                <h6 class="mb-10"><a href="#">Bài viết</a></h6>
                                 <h2 class="mb-10">Thưởng Thức Ly Nước Mát Lạnh Yêu Thích Của Tôi Trong Mùa Thu Này</h2>
                                 <div class="single-header-meta">
                                     <div class="entry-meta meta-1 font-xs mt-15 mb-15">
