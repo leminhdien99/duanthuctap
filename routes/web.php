@@ -10,6 +10,8 @@ use App\Http\Controllers\Client\Product\ProductController;
 use App\Http\Controllers\Client\Product\ProductDealsController;
 use App\Http\Controllers\Client\Blog\BlogController;
 use App\Http\Controllers\Client\Account\AccountController;
+use App\Http\Controllers\Client\Pages\PolicyController;
+use App\Http\Controllers\Client\Pages\Product\DetailsController;
 
 Route::group(['prefix' => '/'], function (){
     Route::get('', [HomeController::class, 'index'])->name('index');
@@ -24,6 +26,9 @@ Route::group(['prefix' => '/'], function (){
         Route::get('/deals', [ProductDealsController::class, 'product_deals'])
              ->name('product_deals');
     });
+    Route::get('details', [DetailsController::class, 'Details'])->name('details');
+    Route::get('policy', [PolicyController::class, 'Policy'])->name('policy');
+
     Route::get('blog', [BlogController::class, 'blog'])->name('blog');
     Route::get('account', [AccountController::class, 'account'])->name('account');
     Route::get('about', [AboutController::class, 'about'])->name('about');
