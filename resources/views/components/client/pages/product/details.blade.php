@@ -1,0 +1,207 @@
+<!--End header-->
+<main class="main">
+    <div class="container mb-30">
+        <div class="row">
+            <div class="col-xl-11 col-lg-12 m-auto">
+                <div class="row">
+                    <div class="col-xl-9">
+                        <div class="product-detail accordion-detail">
+                            <div class="row mb-50 mt-30">
+                                <div class="col-md-6 col-sm-12 col-xs-12 mb-md-0 mb-sm-5">
+                                    <div class="detail-gallery">
+                                        <span class="zoom-icon"><i class="fi-rs-search"></i></span>
+                                        <!-- MAIN SLIDES -->
+                                        <div class="product-image-slider">
+                                            <figure class="border-radius-10">
+                                                <img src="assets/imgs/shop/product-16-2.jpg" alt="product image"/>
+                                            </figure>
+                                            <figure class="border-radius-10">
+                                                <img src="assets/imgs/shop/product-16-1.jpg" alt="product image"/>
+                                            </figure>
+                                        </div>
+                                        <!-- THUMBNAILS -->
+                                    </div>
+                                    <!-- End Gallery -->
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="detail-info pr-30 pl-30">
+                                        <span class="stock-status out-stock"> Khuyến mãi </span>
+                                        <h2 class="title-detail">Cơm gà</h2>
+                                        <div class="product-detail-rating">
+                                            <div class="product-rate-cover text-end">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (32 lượt xem)</span>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix product-price-cover">
+                                            <div class="product-price primary-color float-left">
+                                                <span class="current-price text-brand">15.000đ</span>
+                                                <span>
+                                                        <span class="save-price font-md color3 ml-15">26%</span>
+                                                        <span class="old-price font-md ml-15">30.000đ</span>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                        <div class="short-desc mb-30">
+                                            <p class="font-lg">Cơm gà là món ăn được chế biến và trình bày với hình thức cơm và thịt gà. Cơm có thể dùng là cơm trắng hoặc cơm chiên, cơm rang và thịt gà được trình bày thông thường là đùi gà hay cánh gà. Món cơm gà tương đối dễ làm và phổ biến. Nhưng tùy theo từng quốc gia và tập tục địa phương mà có những phương cách thực hiện khác nhau.</p>
+                                        </div>
+                                        <div class="detail-extralink mb-50">
+                                            <div class="detail-qty border radius">
+                                                <a href="#" class="qty-down"><i class="fi-rs-angle-small-down"></i></a>
+                                                <input type="text" name="quantity" class="qty-val" value="1" min="1">
+                                                <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
+                                            </div>
+                                            <div class="product-extra-link2">
+                                                <button type="submit" class="button button-add-to-cart">
+                                                    <i class="fi-rs-shopping-cart"></i>Thêm giỏ hàng
+                                                </button>
+                                                <a aria-label="Add To Wishlist" class="action-btn hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="font-xs">
+                                            <ul class="mr-50 float-start">
+                                                <li class="mb-5">Loại: <span class="text-brand">Cơm gà</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Detail Info -->
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="tab-style3">
+                                    <ul class="nav nav-tabs text-uppercase">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="Description-tab" data-bs-toggle="tab" href="#Description">Miêu tả</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="Additional-info-tab" data-bs-toggle="tab" href="#Additional-info">thông tin bổ sung</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="Vendor-info-tab" data-bs-toggle="tab" href="#Vendor-info">Người bán</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="Reviews-tab" data-bs-toggle="tab" href="#Reviews">Đánh giá (3)</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content shop_info_tab entry-main-content">
+                                        <div class="tab-pane fade show active" id="Description">
+                                            <div class="">
+                                                <ul class="product-more-infor mt-30">
+                                                    <li><span>Loại đóng gói</span>Cơm hộp</li>
+                                                    <li><span>Cơm gà</span>Gà chiên</li>
+                                                    <li><span>Số lượng</span>tùi phần cơm ,cánh gà chiên</li>
+                                                </ul>
+                                                <hr class="wp-block-separator is-style-dots"/>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="Additional-info">
+                                            <table class="font-md">
+                                                <tbody>
+                                                <tr class="stand-up">
+                                                    <th>Cơm</th>
+                                                    <td>
+                                                        <p>Gà chiên</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="folded-wo-wheels">
+                                                    <th>Cơm thêm</th>
+                                                    <td>
+                                                        <p>1 phần</p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="Vendor-info">
+                                            <div class="vendor-logo d-flex mb-30">
+                                                <img src="assets/imgs/vendor/vendor-18.svg" alt=""/>
+                                            </div>
+                                            <ul class="contact-infor mb-50">
+                                                <li>
+                                                    <img src="assets/imgs/theme/icons/icon-location.svg" alt=""/><strong>Address: </strong>
+                                                    <span>5171 W Campbell Ave undefined Kent, Utah 53127 United States</span>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/imgs/theme/icons/icon-contact.svg" alt=""/><strong>Contact Seller:</strong><span>(+91) - 540-025-553</span>
+                                                </li>
+                                            </ul>
+                                            <div class="d-flex mb-55">
+                                                <div class="mr-30">
+                                                    <p class="text-brand font-xs">Rating</p>
+                                                    <h4 class="mb-0">92%</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="Reviews">
+                                            <!--Comments-->
+                                            <div class="comments-area">
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <h4 class="mb-30">Câu hỏi & trả lời của khách hàng</h4>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <h4 class="mb-30">Phản hồi khách hàng</h4>
+                                                        <div class="d-flex mb-30">
+                                                            <div class="product-rate d-inline-block mr-15">
+                                                                <div class="product-rating" style="width: 90%"></div>
+                                                            </div>
+                                                            <h6>4.8 out of 5</h6>
+                                                        </div>
+                                                        <div class="progress">
+                                                            <span>5 star</span>
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                                        </div>
+                                                        <a href="#" class="font-xs text-muted">How are ratings calculated?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--comment form-->
+                                            <div class="comment-form">
+                                                <h4 class="mb-15">Add a review</h4>
+                                                <div class="product-rate d-inline-block mb-30"></div>
+                                                <div class="row">
+                                                    <div class="col-lg-8 col-md-12">
+                                                        <form class="form-contact comment_form" action="#" id="commentForm">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Write Comment"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" name="name" id="name" type="text" placeholder="Name"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" name="email" id="email" type="email" placeholder="Email"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <input class="form-control" name="website" id="website" type="text" placeholder="Website"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <button type="submit" class="button button-contactForm">Submit Review</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main></body>
