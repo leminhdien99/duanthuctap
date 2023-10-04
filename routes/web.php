@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\Pages\HomeController;
 use App\Http\Controllers\Client\About\AboutController;
 use App\Http\Controllers\Client\Contact\ContactController;
 use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
@@ -13,9 +13,11 @@ use App\Http\Controllers\Client\Account\AccountController;
 use App\Http\Controllers\Client\Pages\PolicyController;
 use App\Http\Controllers\Client\Pages\Product\DetailsController;
 use App\Http\Controllers\Client\ErrorController;
+use App\Http\Controllers\Client\Cart\CartController;
 use App\Http\Controllers\Client\LoginController;
 use App\Http\Controllers\Client\RegisterController;
 use App\Http\Controllers\Client\CheckoutController;
+use App\Http\Controllers\Client\Account\ForgotController;
 
 Route::group(['prefix' => '/'], function (){
     Route::get('', [HomeController::class, 'index'])->name('index');
