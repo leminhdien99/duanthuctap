@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\Pages\HomeController;
+use App\Http\Controllers\Admin\Dashboard\ViewDashboardController;
+use App\Http\Controllers\Admin\Category\AddCategoryController;
+use App\Http\Controllers\Admin\Category\DeleteCategoryController;
+use App\Http\Controllers\Admin\Category\EditCategoryController;
+use App\Http\Controllers\Admin\Category\ListCategoryController;
+
 use App\Http\Controllers\Client\About\AboutController;
 use App\Http\Controllers\Client\Contact\ContactController;
 use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
@@ -19,6 +25,20 @@ use App\Http\Controllers\Client\RegisterController;
 use App\Http\Controllers\Client\CheckoutController;
 use App\Http\Controllers\Client\Account\ForgotController;
 
+
+
+Route::group(['prefix' => 'admin'], function (){
+    Route::get('/', [ViewDashboardController::class, 'dashboar'])->name('dashboar');
+    Route::group(['prefix' => 'category'], function (){
+        Route::get('/list', [ListCategoryController::class, 'listCategory'])->name('listCategory');
+        Route::get('/delete', [DeleteCategoryController::class, 'deleteCategory'])->name('deleteCategory');
+        Route::get('/edit', [EditCategoryController::class, 'editFormCategory'])->name('editCategory');
+        Route::post('/edit', [EditCategoryController::class, 'editCategory'])->name('editCategory');
+        Route::get('/add', [AddCategoryController::class, 'addFormCategory'])->name('addCategory');
+        Route::post('/add', [AddCategoryController::class, 'addCategory'])->name('addCategory');
+    });
+
+});
 Route::group(['prefix' => '/'], function (){
     Route::get('', [HomeController::class, 'index'])->name('index');
     Route::group(['prefix' => 'cart'], function (){
