@@ -108,14 +108,14 @@
                             </ul>
                             </li>
                             <li>
-                                <a href="page-about.html">Giới thiệu</a>
+                                <a href="{{route('about')}}">Giới thiệu</a>
                             </li>
 
                             <li>
                                 <a href="blog-category-grid.html">Bài viết</a>
                             </li>
                             <li>
-                                <a href="page-about.html">Liên hệ</a>
+                                <a href="{{route('contact')}}">Liên hệ</a>
                             </li>
                             <li class="position-static">
                                 <a href="#">Thực đơn <i class="fi-rs-angle-down"></i></a>
