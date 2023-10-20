@@ -16,7 +16,7 @@ use App\Http\Controllers\Client\Product\ProductController;
 use App\Http\Controllers\Client\Product\ProductDealsController;
 use App\Http\Controllers\Client\Blog\BlogController;
 use App\Http\Controllers\Client\Account\AccountController;
-use App\Http\Controllers\Client\Account\ForgotController;
+
 
 use App\Http\Controllers\Client\Pages\PolicyController;
 use App\Http\Controllers\Client\Pages\Product\DetailsController;
@@ -53,6 +53,12 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/edit', [EditCategoryController::class, 'editFormCategory'])
              ->name('editCategory');
         Route::post('/edit', [EditCategoryController::class, 'editCategory'])->name('editCategory');
+        Route::get('/delete/{slug}', [DeleteCategoryController::class, 'deleteCategory'])
+             ->name('deleteCategory');
+        Route::get('/edit/{slug}', [EditCategoryController::class, 'editFormCategory'])
+             ->name('editCategory');
+        Route::post('/edit/{slug}', [EditCategoryController::class, 'editCategory'])
+             ->name('editCategory');
         Route::get('/add', [AddCategoryController::class, 'addFormCategory'])->name('addCategory');
         Route::post('/add', [AddCategoryController::class, 'addCategory'])->name('addCategory');
 
@@ -60,16 +66,24 @@ Route::group(['prefix' => 'admin'], function (){
 
     Route::group(['prefix' => 'product'], function (){
         Route::get('/list', [ListProductController::class, 'listProduct'])->name('listProduct');
-        Route::get('/listHistory', [ListProductController::class, 'listHistory'])->name('listHistory');
+        Route::get('/listHistory', [ListProductController::class, 'listHistory'])
+             ->name('listHistory');
         Route::post('/add', [AddProductController::class, 'addProduct'])->name('addProduct');
         Route::get('/add', [AddProductController::class, 'addFormProduct'])->name('addProduct');
-        Route::get('/edit/{slug}', [EditProductController::class, 'editFormProduct'])->name('editProduct');
-        Route::post('/edit/{slug}', [EditProductController::class, 'updateProduct'])->name('editProduct');
-        Route::get('/delete/{id}', [DeleteProductController::class, 'deleteProduct'])->name('deleteProduct');
-        Route::get('/deleteHistory/{slug}', [DeleteProductController::class, 'deleteHistory'])->name('deleteHistory');
-        Route::get('/restore/{slug}', [DeleteProductController::class, 'restoreProduct'])->name('restoreProduct');
-        Route::get('/image/{id}', [EditProductController::class, 'deleteImage'])->name('deleteImage');
-        Route::get('/inter/{id}', [EditProductController::class, 'deleteInter'])->name('deleteInter');
+        Route::get('/edit/{slug}', [EditProductController::class, 'editFormProduct'])
+             ->name('editProduct');
+        Route::post('/edit/{slug}', [EditProductController::class, 'updateProduct'])
+             ->name('editProduct');
+        Route::get('/delete/{id}', [DeleteProductController::class, 'deleteProduct'])
+             ->name('deleteProduct');
+        Route::get('/deleteHistory/{slug}', [DeleteProductController::class, 'deleteHistory'])
+             ->name('deleteHistory');
+        Route::get('/restore/{slug}', [DeleteProductController::class, 'restoreProduct'])
+             ->name('restoreProduct');
+        Route::get('/image/{id}', [EditProductController::class, 'deleteImage'])
+             ->name('deleteImage');
+        Route::get('/inter/{id}', [EditProductController::class, 'deleteInter'])
+             ->name('deleteInter');
         Route::get('/{id}', [ListProductController::class, 'StatusProduct'])->name('StatusProduct');
     });
 
@@ -95,6 +109,8 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/add', [AddVoucherController::class, 'addFormVoucher'])->name('addFormVoucher');
         Route::post('/add', [AddVoucherController::class, 'addVoucher'])->name('addVoucher');
         Route::get('status/{id}', [ListVoucherController::class, 'status'])->name('status');
+        Route::get('/{id}', [ListCategoryController::class, 'StatusCategory'])
+             ->name('StatusCategory');
     });
 
 });

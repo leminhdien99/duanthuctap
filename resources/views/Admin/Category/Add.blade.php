@@ -1,6 +1,6 @@
 @extends('Admin.Layout.master')
 
-@section('link')
+@push('link')
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- Bootstrap Color Picker -->
@@ -15,12 +15,12 @@
     <!-- dropzonejs -->
     <link rel="stylesheet" href="{{ asset('plugins/dropzone/min/dropzone.min.css') }}">
 
-@endsection
+@endpush
 @section('title')
     @if($page == 'addCategory')
-        Thêm danh mục bài viết
+        Thêm danh mục sản phẩm
     @else
-        Sửa danh mục bài viết
+        Sửa danh mục sản phẩm
     @endif
 @endsection
 
@@ -28,16 +28,18 @@
     <div class="hold-transition sidebar-mini">
         <div class="wrapper">
             <div class="content-wrapper">
-                <form action="@if($page == 'addCategory'){{route('addCategory')}}@else{{route('editCategory')}}@endif" method="post" class="mx-5 pt-4">
+                <form action="{{ $page == 'addCategory' ? route('addCategory') : route('editCategory', $data->slug) }}" method="post" class="mx-5 pt-4">
                     @csrf
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Tên danh mục</label>
-                        <input type="email" class="form-control" value="{{old('email')}}" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        @error('name')
+                        <div class="alert alert-danger mt-3">{{ $message }}</div>
+                        @enderror
+                        <label for="name" class="form-label">Tên danh mục</label>
+                        <input type="text" class="form-control" value="{{ $page == 'addCategory' ? old('name') : $data->name }}" name="name" id="name">
                     </div>
                     <div class="form-outline mb-4">
-                        <label class="form-label" for="textAreaExample6">Ghi chú</label>
-
-                        <textarea class="form-control" name="note" id="textAreaExample6" rows="3">{{old('note')}}</textarea>
+                        <label class="form-label" for="note">Ghi chú</label>
+                        <textarea class="form-control" name="note" id="note" rows="3">{{ $page == 'addCategory' ? old('note') : $data->note }}</textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary"> @if($page == 'addCategory')
@@ -54,7 +56,7 @@
 @endsection
 
 {{-- javascript --}}
-@section('js')
+@push('javascript')
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -220,7 +222,7 @@
         }
         // DropzoneJS Demo Code End
     </script>
-@endsection
+@endpush
 {{-- endjavascript --}}
 
 

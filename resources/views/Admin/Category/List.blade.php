@@ -2,7 +2,7 @@
 
 
 {{-- css --}}
-@section('link')
+@push('link')
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
-@endsection
+@endpush
 @section('title')
    Quản lý danh mục
 @endsection
@@ -33,30 +33,48 @@
                         <x-admin.buttom.add router="addCategory" name="Thêm danh mục"></x-admin.buttom.add>
 
                         <table id="example1" class="table table-bordered table-striped">
+                            @if(session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
+                            @if(session('success'))
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>@endif
                             <thead>
                             <tr>
 
-                                <th>Tên  danh mục</th>
+                                <th>Tên danh mục</th>
                                 <th>Slug</th>
                                 <th>Ngày tạo</th>
-                                <th>Ghi chú</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Trạng thái</th>
                                 <th>Nghiệp vụ</th>
                             </tr>
                             </thead>
 
                             <tbody>
-
+                            @foreach($query as $item)
                             <tr>
-                                <td>Other browsers</td>
-                                <td>All others</td>
-                                <td>-áda</td>
-                                <td>-adas</td>
-                                <td><a href="{{route('editCategory')}}">Sửa</a> /
-                                    <a href="{{route('deleteCategory')}}">Xóa</a></td>
+                                <td>{{$item->name}}</td>
+                                <td>{{$item->slug}}</td>
+                                <td>{{$item->created_at}}</td>
+                                <td>{{$item->updated_at}}</td>
+                                <td>
+                                    <a href="{{route('StatusCategory', $item->id)}}"
+                                       class="btn btn-sm btn-{{$item->status ? 'success':'danger'}}">
+                                        {{$item->status ? 'Hiện':'Ẩn'}}
+                                    </a>
+                                </td>
+                                <td><a href="{{route('editCategory',$item->slug)}}">Sửa</a> /
+                                    <a href="{{route('deleteCategory',$item->slug)}}">Xóa</a></td>
                             </tr>
+                            @endforeach
                             </tbody>
 
                         </table>
+                        <div class="mt-3">{{ $query->links() }}</div>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -65,7 +83,7 @@
     </div>
 @endsection
 
-@section('javascript')
+@push('javascript')
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap 4 -->
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -86,27 +104,7 @@
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('dist/js/demo.js') }}"></script>
-    <!-- Page specific script -->
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true,
-                "lengthChange": false,
-                "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-        });
-    </script>
-@endsection
+@endpush
 <!-- HTML !-->
 
 <style>
