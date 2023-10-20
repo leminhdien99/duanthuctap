@@ -4,7 +4,7 @@
         <div class="modal-content">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="modal-body">
-                <div class="deal" style="background-image: url('assets/imgs/banner/popup-1.png')">
+                <div class="deal">
                     <div class="deal-top">
                         <h6 class="mb-10 text-brand-2">Giao dịch trong ngày</h6>
                     </div>
@@ -211,7 +211,7 @@
         <div class="container">
             <div class="header-wrap">
                 <div class="logo logo-width-1">
-                    <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo"/></a>
+                    <a href="{{route('index')}}"><img src="assets/imgs/theme/logo.svg" alt="logo"/></a>
                 </div>
                 <div class="header-right">
                     <div class="search-style-2">
@@ -245,7 +245,7 @@
                                     <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg"/>
                                     <span class="pro-count blue">2</span>
                                 </a>
-                                <a href="shop-cart.html"><span class="lable">Giỏ hàng</span></a>
+                                <a href="{{route('listCart')}}"><span class="lable">Giỏ hàng</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2">
                                     <ul>
                                         <li>
@@ -265,8 +265,8 @@
                                                 <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-2.jpg"/></a>
                                             </div>
                                             <div class="shopping-cart-title">
-                                                <h4><a href="shop-product-right.html">Corduroy Shirts</a></h4>
-                                                <h4><span>1 × </span>$3200.00</h4>
+                                                <h4><a href="shop-product-right.html">Cơm sườn</a></h4>
+                                                <h4><span>1 × </span>10.000đ</h4>
                                             </div>
                                             <div class="shopping-cart-delete">
                                                 <a href="#"><i class="fi-rs-cross-small"></i></a>
@@ -275,11 +275,11 @@
                                     </ul>
                                     <div class="shopping-cart-footer">
                                         <div class="shopping-cart-total">
-                                            <h4>Total <span>$4000.00</span></h4>
+                                            <h4>Total <span>10.000đ</span></h4>
                                         </div>
                                         <div class="shopping-cart-button">
-                                            <a href="shop-cart.html" class="outline">View cart</a>
-                                            <a href="shop-checkout.html">Checkout</a>
+                                            <a href="shop-cart.html" class="outline">Xem giỏ hàng</a>
+                                            <a href="shop-checkout.html">Thanh toán</a>
                                         </div>
                                         <div class="shopping-cart-button">
 
@@ -293,6 +293,7 @@
                                     <img alt="Nest" src="assets/imgs/theme/icons/icon-user.svg"/>
                                     <span class="pro-count blue">1</span>
                                 </a>
+                                <a href="{{ route('account') }}"><span class="lable ml-0">Tài khoản</span></a>
                                 <a href="{{auth()->check() != '' ? route('account'):route('login')}}"><i class="ti-user"></i><span class="lable"> {{auth()->check() != '' ? 'Tài khoản':'Đăng nhập'}}</span></a>
 
                             @if(auth()->check())
@@ -305,6 +306,8 @@
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
+                                            <a href="#"><i class="fi fi-rs-user mr-10"></i>
+                                                Tài khoản của tôi</a>
                                             <a href="{{route('register')}}"><i class="fi fi-rs-id-badge mr-10"></i>
                                                 Đăng ký</a>
                                         </li>
@@ -313,10 +316,10 @@
                                                 Tài khoản của tôi</a>
                                         </li>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Theo dõi đơn hàng</a>
+                                            <a href="#"><i class="fi fi-rs-location-alt mr-10"></i>Theo dõi đơn hàng</a>
                                         </li>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-label mr-10"></i>Voucher
+                                            <a href="#"><i class="fi fi-rs-label mr-10"></i>Voucher
                                                 của tôi</a>
                                         </li>
                                         <li>
@@ -324,7 +327,7 @@
                                                 yêu thích</a>
                                         </li>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>Cài đặt</a>
+                                            <a href="#"><i class="fi fi-rs-settings-sliders mr-10"></i>Cài đặt</a>
                                         </li>
 
                                     </ul>
@@ -337,103 +340,4 @@
         </div>
     </div>
 </header>
-
-<div class="mobile-header-active mobile-header-wrapper-style">
-    <div class="mobile-header-wrapper-inner">
-        <div class="mobile-header-top">
-            <div class="mobile-header-logo">
-                <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo"/></a>
-            </div>
-            <div class="mobile-menu-close close-style-wrap close-style-position-inherit">
-                <button class="close-style search-close">
-                    <i class="icon-top"></i>
-                    <i class="icon-bottom"></i>
-                </button>
-            </div>
-        </div>
-        <div class="mobile-header-content-area">
-            <div class="mobile-search search-style-3 mobile-header-border">
-                <form action="#">
-                    <input type="text" placeholder="Search for items…"/>
-                    <button type="submit"><i class="fi-rs-search"></i></button>
-                </form>
-            </div>
-            <div class="mobile-menu-wrap mobile-header-border">
-                <!-- mobile menu start -->
-                <nav>
-                    <ul class="mobile-menu font-heading">
-                        <li class="menu-item-has-children">
-                            <a href="index.html">Trang chủ</a>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="shop-grid-right.html">Sản phẩm</a>
-                            <ul class="dropdown">
-                                <li><a href="shop-grid-right.html">Cơm gà </a></li>
-                        </li>
-                        <li><a href="shop-filter.html">Cơm chay</a></li>
-                    </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Giới thiệu</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Bài viết</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Liên hệ</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Thực đơn</a>
-                        <ul class="dropdown">
-                            <li class="menu-item-has-children">
-                                <a href="#">Cơm chay</a>
-                                <ul class="dropdown">
-                                    <li><a href="shop-product-right.html">Cơm canh cải</a></li>
-                                    <li><a href="shop-product-right.html">Cơm tàu hủ chiên</a></li>
-                                    <li><a href="shop-product-right.html">Cơm nấm</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Cơm gà</a>
-                                <ul class="dropdown">
-                                    <li><a href="shop-product-right.html">Cơm gà nướng</a></li>
-                                    <li><a href="shop-product-right.html">Cơm cánh gà</a></li>
-                                    <li><a href="shop-product-right.html">Cơm chân gà </a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Cơm thịt heo</a>
-                                <ul class="dropdown">
-                                    <li><a href="shop-product-right.html">Thịt ba rọi</a></li>
-                                    <li><a href="shop-product-right.html">Thịt sườn</a></li>
-                                    <li><a href="shop-product-right.html">Thịt heo chiên</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    </ul>
-                </nav>
-                <!-- mobile menu end -->
-            </div>
-            <div class="mobile-header-info-wrap">
-                <div class="single-mobile-header-info">
-                    <a href="page-contact.html"><i class="fi-rs-marker"></i> Địa điểm của chúng tôi </a>
-                </div>
-                <div class="single-mobile-header-info">
-                    <a href="page-login.html"><i class="fi-rs-user"></i>Đăng nhập / Đăng xuất </a>
-                </div>
-                <div class="single-mobile-header-info">
-                    <a href="#"><i class="fi-rs-headphones"></i>(+01) - 2345 - 6789 </a>
-                </div>
-            </div>
-            <div class="mobile-social-icon mb-50">
-                <h6 class="mb-15">Theo dõi</h6>
-                <a href="#"><img src="assets/imgs/theme/icons/icon-facebook-white.svg" alt=""/></a>
-                <a href="#"><img src="assets/imgs/theme/icons/icon-twitter-white.svg" alt=""/></a>
-                <a href="#"><img src="assets/imgs/theme/icons/icon-instagram-white.svg" alt=""/></a>
-                <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest-white.svg" alt=""/></a>
-                <a href="#"><img src="assets/imgs/theme/icons/icon-youtube-white.svg" alt=""/></a>
-            </div>
-        </div>
-    </div>
-</div><!--Kết thúc cấu trúc phần header  -->
+<!--Kết thúc cấu trúc phần header  -->

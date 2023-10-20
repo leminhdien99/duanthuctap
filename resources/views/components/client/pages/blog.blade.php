@@ -12,7 +12,7 @@
             </div>
             <div class="entry-content">
                 <h2 class="post-title mb-20">
-                    <a href="{{ route('blogdetail') }}">Thưởng Thức Bánh Sô Cô La Nóng Chảy Yêu Thích Của Tôi Trong Mùa Thu Này</a>
+                    <a href="{{route('blogdetail')}}">Thưởng Thức Bánh Sô Cô La Nóng Chảy Yêu Thích Của Tôi Trong Mùa Thu Này</a>
                 </h2>
                 <p class="post-exerpt font-medium text-muted mb-30">bánh sô cô la là một món tráng miệng cực kỳ phong phú và ngon miệng,
                     chắc chắn sẽ là phần phổ biến nhất trong bất kỳ bữa ăn nào! Nhân bánh pudding sô cô la, lớp vỏ xốp và kem đánh bông
@@ -25,7 +25,7 @@
                             <span class="ml-30"><span class="mr-10 text-muted"><i class="fi-rs-share"></i></span>18k</span>
                         </div>
                     </div>
-                    <a href="{{ route('blogdetail') }}" class="btn btn-sm">Đọc Thêm<i class="fi-rs-arrow-right ml-10"></i></a>
+                    <a href="{{route('blogdetail')}}" class="btn btn-sm">Đọc Thêm<i class="fi-rs-arrow-right ml-10"></i></a>
                 </div>
             </div>
         </article>
@@ -34,14 +34,14 @@
             <div class="position-relative overflow-hidden">
                 <span class="top-left-icon"><i class="fi-rs-headphones"></i></span>
                 <div class="post-thumb border-radius-15">
-                    <a href="{{ route('blogdetail') }}">
+                    <a href="{{route('blogdetail')}}">
                         <img src="{{asset('assets/imgs/blog/blog-15.png')}}" alt="shop"/>
                     </a>
                 </div>
             </div>
             <div class="entry-content">
                 <h2 class="post-title mb-20">
-                    <a href="{{ route('blogdetail') }}">Cách làm chè gừng gạo nếp ấm nồng cho ngày mưa</a>
+                    <a href="{{route('blogdetail')}}">TCách làm chè gừng gạo nếp ấm nồng cho ngày mưa</a>
                 </h2>
                 <p class="post-exerpt font-medium text-muted mb-30">Gừng là một thứ gia vị rẻ tiền nhưng hiệu quả cho sức khỏe sẽ khiến
                     bạn phải tròn mắt ngạc nhiên bởi những tác dụng nó mang lại, nhất là vào mùa đông mà được ăn một bát chè gừng gạo nếp
@@ -64,14 +64,14 @@
             <div class="position-relative overflow-hidden">
                 <span class="top-left-icon"><i class="fi-rs-headphones"></i></span>
                 <div class="post-thumb border-radius-15">
-                    <a href="{{ route('blogdetail') }}">
+                    <a href="{{route('blogdetail')}}">
                         <img src="{{asset('assets/imgs/blog/blog-16.png')}}" alt="shop"/>
                     </a>
                 </div>
             </div>
             <div class="entry-content">
                 <h2 class="post-title mb-20">
-                    <a href="{{ route('blogdetail') }}">Thưởng Thức Bánh Sô Cô La Nóng Chảy Yêu Thích Của Tôi Trong Mùa Thu Này</a>
+                    <a href="{{route('blogdetail')}}">Thưởng Thức Bánh Sô Cô La Nóng Chảy Yêu Thích Của Tôi Trong Mùa Thu Này</a>
                 </h2>
                 <p class="post-exerpt font-medium text-muted mb-30">bánh sô cô la là một món tráng miệng cực kỳ phong phú và ngon miệng,
                     chắc chắn sẽ là phần phổ biến nhất trong bất kỳ bữa ăn nào! Nhân bánh pudding sô cô la, lớp vỏ xốp và kem đánh bông
@@ -84,7 +84,7 @@
                             <span class="ml-30"><span class="mr-10 text-muted"><i class="fi-rs-share"></i></span>18k</span>
                         </div>
                     </div>
-                    <a href="{{ route('blogdetail') }}" class="btn btn-sm">Đọc Thêm<i class="fi-rs-arrow-right ml-10"></i></a>
+                    <a href="{{route('blogdetail')}}" class="btn btn-sm">Đọc Thêm<i class="fi-rs-arrow-right ml-10"></i></a>
                 </div>
             </div>
         </article>
@@ -93,14 +93,14 @@
             <div class="position-relative overflow-hidden">
                 <span class="top-left-icon"><i class="fi-rs-headphones"></i></span>
                 <div class="post-thumb border-radius-15">
-                    <a href="{{ route('blogdetail') }}">
+                    <a href="{{route('blogdetail')}}">
                         <img src="{{asset('assets/imgs/blog/blog-17.png')}}" alt="shop"/>
                     </a>
                 </div>
             </div>
             <div class="entry-content">
                 <h2 class="post-title mb-20">
-                    <a href="{{ route('blogdetail') }}">Cách làm chè gừng gạo nếp ấm nồng cho ngày mưa</a>
+                    <a href="{{route('blogdetail')}}">TCách làm chè gừng gạo nếp ấm nồng cho ngày mưa</a>
                 </h2>
                 <p class="post-exerpt font-medium text-muted mb-30">Gừng là một thứ gia vị rẻ tiền nhưng hiệu quả cho sức khỏe sẽ khiến
                     bạn phải tròn mắt ngạc nhiên bởi những tác dụng nó mang lại, nhất là vào mùa đông mà được ăn một bát chè gừng gạo nếp

@@ -185,7 +185,7 @@
                                 <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".1s">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="shop-product-right.html">
+                                            <a href="{{route('details')}}">
                                                 <img class="default-img" src="{{ $item['img'] }}" alt=""/>
                                                 <img class="hover-img" src="assets/imgs/shop/product-1-2.jpg" alt=""/>
                                             </a>
@@ -200,7 +200,7 @@
                                         </div>
                                     </div>
                                     <div class="product-content-wrap">
-                                        <h2><a href="shop-product-right.html">{{ $item['name'] }}</a></h2>
+                                        <h2><a href="{{route('details')}}">{{ $item['name'] }}</a></h2>
                                         <div class="product-rate-cover">
                                             <div class="product-rate d-inline-block">
                                                 <div class="product-rating" style="width: 90%"></div>
@@ -216,7 +216,7 @@
                                                 <span class="old-price">{{ $item['price'] }}</span>
                                             </div>
                                             <div class="add-cart">
-                                                <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Giỏ hàng
+                                                <a class="add" href="{{route('listCart')}}"><i class="fi-rs-shopping-cart mr-5"></i>Giỏ hàng
                                                 </a>
                                             </div>
                                         </div>
