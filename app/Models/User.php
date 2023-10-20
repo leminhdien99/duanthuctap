@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\DB;
+
 
 class User extends Authenticatable
 {
@@ -45,16 +47,21 @@ class User extends Authenticatable
             ->update($data);
     }
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
+
+
+    public function listUser($condition){
+
+        return $this->orderBy('id', 'desc')->where($condition)->paginate(5);
+
+    }
+
+    public function Show($condition){
+        return DB::table('roles')->where($condition)->get();
+    }
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
     /**
      * The attributes that should be cast.
      *
@@ -75,4 +82,8 @@ class User extends Authenticatable
             ->where('email','=',$email)
             ->update($data);
     }
+    public function editUser($id){
+        return $this->where('id', '=', $id)->first();
+    }
+
 }

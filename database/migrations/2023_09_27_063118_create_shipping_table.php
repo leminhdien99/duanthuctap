@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('id_user')->constrained('users');
             $table->foreignId('id_order')->constrained('orders');
             $table->string('name');
-            $table->bigInteger('cod')->default('');
+            $table->bigInteger('cod')->default(0);
             $table->tinyInteger('status')->default(0);
             $table->date('date_input');
         });
