@@ -234,11 +234,11 @@
                                 <a href="shop-compare.html"><span class="lable ml-0">So sánh</span></a>
                             </div>
                             <div class="header-action-icon-2">
-                                <a href="shop-wishlist.html">
+                                <a href="{{route('wishlist')}}">
                                     <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg"/>
                                     <span class="pro-count blue">6</span>
                                 </a>
-                                <a href="shop-wishlist.html"><span class="lable">Danh sách yêu thích</span></a>
+                                <a href="{{route('wishlist')}}"><span class="lable">Danh sách yêu thích</span></a>
                             </div>
                             <div class="header-action-icon-2">
                                 <a class="mini-cart-icon" href="shop-cart.html">
@@ -281,19 +281,36 @@
                                             <a href="shop-cart.html" class="outline">View cart</a>
                                             <a href="shop-checkout.html">Checkout</a>
                                         </div>
+                                        <div class="shopping-cart-button">
+
                                     </div>
                                 </div>
                             </div>
+                            </div>
+
                             <div class="header-action-icon-2">
-                                <a href="page-account.html">
-                                    <img class="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-user.svg"/>
+                                <a class="mini-cart-icon" href="{{route('login')}}">
+                                    <img alt="Nest" src="assets/imgs/theme/icons/icon-user.svg"/>
+                                    <span class="pro-count blue">1</span>
                                 </a>
-                                <a href="page-account.html"><span class="lable ml-0">Tài khoản</span></a>
+                                <a href="{{auth()->check() != '' ? route('account'):route('login')}}"><i class="ti-user"></i><span class="lable"> {{auth()->check() != '' ? 'Tài khoản':'Đăng nhập'}}</span></a>
+
+                            @if(auth()->check())
+                                    <a class="px-2" href="{{route('logout')}}"><span class="lable">Đăng xuất</span></a>
+                                @endif </div>
+                            </div>
+
+                            <div class="header-action-icon-2">
+
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
                                         <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My
-                                                Tài khoản</a>
+                                            <a href="{{route('register')}}"><i class="fi fi-rs-id-badge mr-10"></i>
+                                                Đăng ký</a>
+                                        </li>
+                                        <li>
+                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>
+                                                Tài khoản của tôi</a>
                                         </li>
                                         <li>
                                             <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Theo dõi đơn hàng</a>
@@ -303,15 +320,13 @@
                                                 của tôi</a>
                                         </li>
                                         <li>
-                                            <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>Danh sách
+                                            <a href="{{route('wishlist')}}"><i class="fi fi-rs-heart mr-10"></i>Danh sách
                                                 yêu thích</a>
                                         </li>
                                         <li>
                                             <a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>Cài đặt</a>
                                         </li>
-                                        <li>
-                                            <a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Đăng xuất</a>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
