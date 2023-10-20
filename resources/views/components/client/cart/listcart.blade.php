@@ -1,7 +1,6 @@
 <tr>
 
     <td class="custome-checkbox pl-30">
-
     </td>
     <td class="image product-thumbnail"><img src="{{asset('assets/imgs/shop/product-2-1.jpg')}}" alt="#">
     </td>

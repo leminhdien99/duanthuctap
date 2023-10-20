@@ -16,6 +16,8 @@ use App\Http\Controllers\Client\Product\ProductController;
 use App\Http\Controllers\Client\Product\ProductDealsController;
 use App\Http\Controllers\Client\Blog\BlogController;
 use App\Http\Controllers\Client\Account\AccountController;
+use App\Http\Controllers\Client\Account\ForgotController;
+
 use App\Http\Controllers\Client\Pages\PolicyController;
 use App\Http\Controllers\Client\Pages\Product\DetailsController;
 use App\Http\Controllers\Client\ErrorController;
@@ -24,6 +26,12 @@ use App\Http\Controllers\Client\Account\LoginController;
 use App\Http\Controllers\Client\Account\RegisterController;
 use App\Http\Controllers\Client\Cart\CartController;
 use App\Http\Controllers\Client\CheckoutController;
+
+use App\Http\Controllers\Admin\Products\ListProductController;
+use App\Http\Controllers\Admin\Products\AddProductController;
+use App\Http\Controllers\Admin\Products\DeleteProductController;
+use App\Http\Controllers\Admin\Products\EditProductController;
+
 
 // User and Voucher
 use App\Http\Controllers\Admin\User\AddUserController;
@@ -47,6 +55,22 @@ Route::group(['prefix' => 'admin'], function (){
         Route::post('/edit', [EditCategoryController::class, 'editCategory'])->name('editCategory');
         Route::get('/add', [AddCategoryController::class, 'addFormCategory'])->name('addCategory');
         Route::post('/add', [AddCategoryController::class, 'addCategory'])->name('addCategory');
+
+    });
+
+    Route::group(['prefix' => 'product'], function (){
+        Route::get('/list', [ListProductController::class, 'listProduct'])->name('listProduct');
+        Route::get('/listHistory', [ListProductController::class, 'listHistory'])->name('listHistory');
+        Route::post('/add', [AddProductController::class, 'addProduct'])->name('addProduct');
+        Route::get('/add', [AddProductController::class, 'addFormProduct'])->name('addProduct');
+        Route::get('/edit/{slug}', [EditProductController::class, 'editFormProduct'])->name('editProduct');
+        Route::post('/edit/{slug}', [EditProductController::class, 'updateProduct'])->name('editProduct');
+        Route::get('/delete/{id}', [DeleteProductController::class, 'deleteProduct'])->name('deleteProduct');
+        Route::get('/deleteHistory/{slug}', [DeleteProductController::class, 'deleteHistory'])->name('deleteHistory');
+        Route::get('/restore/{slug}', [DeleteProductController::class, 'restoreProduct'])->name('restoreProduct');
+        Route::get('/image/{id}', [EditProductController::class, 'deleteImage'])->name('deleteImage');
+        Route::get('/inter/{id}', [EditProductController::class, 'deleteInter'])->name('deleteInter');
+        Route::get('/{id}', [ListProductController::class, 'StatusProduct'])->name('StatusProduct');
     });
 
     Route::group(['prefix' => 'user'], function (){

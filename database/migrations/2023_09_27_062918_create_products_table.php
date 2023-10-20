@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->date('date_input');
             $table->integer('quantify');
             $table->bigInteger('price');
             $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('delete')->default(0);
             $table->longText('describe');
-
+            $table->timestamps();
         });
     }
 
