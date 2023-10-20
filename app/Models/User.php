@@ -18,10 +18,32 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'id',
+        'id_role',
+        'social_id',
+        'image',
+        'fullname',
         'email',
+        'phone',
+        'address',
+        'token',
         'password',
+        'wallet',
+        'gender',
+        'status',
+
     ];
+    protected $table = 'users';
+
+    public function addUsers($data){
+        return $this->insert($data);
+    }
+
+    public function updateUser($data, $condition){
+        return $this
+            ->where($condition)
+            ->update($data);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -42,4 +64,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    //quên mật khẩu
+    public function resetPassword($condition){
+        return $this
+            ->where($condition)
+            ->first();
+    }
+    public function editPassword($email,$data){
+        return $this
+            ->where('email','=',$email)
+            ->update($data);
+    }
 }

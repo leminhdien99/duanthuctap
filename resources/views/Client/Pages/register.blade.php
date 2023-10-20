@@ -1,18 +1,9 @@
 @extends('Client.layout.Master')
-
-@section('title')
-    Tạo Tài Khoản
+@section('js')
+    <script src="{{asset('assets/js/showhide.js')}}"></script>
 @endsection
 @section('main')
     <main class="main pages">
-        <div class="page-header breadcrumb-wrap">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="{{route('index')}}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Trang Chủ</a>
-                    <span></span> Tạo Tài Khoản
-                </div>
-            </div>
-        </div>
         <div class="page-content pt-150 pb-150">
             <div class="container">
                 <div class="row">
@@ -22,31 +13,115 @@
                                 <div class="login_wrap widget-taber-content background-white">
                                     <div class="padding_eight_all bg-white">
                                         <div class="heading_s1">
-                                            <h1 class="mb-5">Tạo Tài Khoản Mới</h1>
+                                            <h1 class="mb-5">Đăng ký</h1>
                                             <p class="mb-30">Bạn đã có tài khoản ? <a href="{{route('login')}}">Đăng nhập</a></p>
                                         </div>
-                                        <form method="post">
+                                        @if(Session::has('success'))
+                                            <div class="alert alert-success" role="alert">
+                                                {{Session::get('success')}}
+                                            </div>
+                                        @endif
+                                        <form action="{{route('registerFrom')}}" method="post" enctype="multipart/form-data">
+                                            @csrf
                                             <div class="form-group">
-                                                <input type="text" required="" name="username" placeholder="Nhập vào họ và tên" />
+                                                <input type="text" name="fullname" value="{{old('fullname')}}"  placeholder="Họ và tên" />
+                                                @error('fullname')
+                                                <p class="text-danger">
+                                                    {{ $message }}
+                                                </p>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" required="" name="email" placeholder="Nhập vào địa chỉ email" />
+                                                <input type="text" name="email" value="{{old('email')}}"  placeholder="Email" />
+                                                @error('email')
+                                                <p class="text-danger">
+                                                    {{ $message }}
+                                                </p>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
-                                                <input required="" type="password" name="password" placeholder="Nhập mật khẩu" />
+                                                <input type="text"  name="address" value="{{old('address')}}"  placeholder="Địa chỉ" />
+                                                @error('address')
+                                                <p class="text-danger">
+                                                    {{ $message }}
+                                                </p>
+                                                @enderror
                                             </div>
                                             <div class="form-group">
-                                                <input required="" type="password" name="password" placeholder="Nhập lại mật khẩu" />
+                                                <input type="text" name="phone" value="{{old('phone')}}"  placeholder="Số điện thoại" />
+                                                @error('phone')
+                                                <p class="text-danger">
+                                                    {{ $message }}
+                                                </p>
+                                                @enderror
                                             </div>
-                                            <div class="login_footer form-group mb-50">
+                                            <div class="date" id="reservationdatetime" data-target-input="nearest">
+                                                <input type='file' name="uploadfile" multiple id="imgInp"/>
+                                            </div>
+                                            <div class="text-center">
+                                                <img width="100" id="blah" src="#" alt="your image"/>
+                                            </div>
+                                            @error('uploadfile')
+                                            <p class="text-danger">
+                                                {{ $message }}
+                                            </p>
+                                            @enderror
+                                            <div class="form-group">
+                                                <input type="password" value="{{old('password')}}"  name="password" class="form-control" id="myInput" placeholder="Mật khẩu">
+                                                @error('password')
+                                                <p class="text-danger">
+                                                    {{ $message }}
+                                                </p>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="mb-3">
+                                                    <input style="width: 15px; height: 15px" type="checkbox" onclick="myFunction()"class="mx-1"> Hiện mật khẩu
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" value="{{old('password_confirmation')}}"  name="password_confirmation" class="form-control" id="againpassword" placeholder="Nhập lại mật khẩu">
+                                                @error('password_confirmation')
+                                                <p class="text-danger">
+                                                    {{ $message }}
+                                                </p>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="mb-3">
+                                                    <input style="width: 15px; height: 15px" type="checkbox" onclick="myFunctionone()" class="mx-1"> Hiện mật khẩu
+                                                </div>
+                                            </div>
+                                            <div class="payment_option">
+                                                <label for="exampleInputFile">Giới tính</label>
+                                                <div class="custome-radio">
+                                                    <input class="form-check-input" type="radio" name="gender" value="nam" {{old('gender') =="nam"? "checked" : ""}} id="exampleRadios3"/>
+                                                    <label class="form-check-label" for="exampleRadios3" data-bs-toggle="collapse" data-target="#bankTranfer" aria-controls="bankTranfer">Nam</label>
+                                                </div>
+                                                <div class="custome-radio">
+                                                    <input class="form-check-input" type="radio" name="gender" value="nữ" {{old('gender') =="nữ"? "checked" : ""}} id="exampleRadios4"/>
+                                                    <label class="form-check-label" for="exampleRadios4" data-bs-toggle="collapse" data-target="#checkPayment" aria-controls="checkPayment">Nữ</label>
+                                                </div>
+                                            </div>
+                                            @error('gender')
+                                            <p class="text-danger">
+                                                {{ $message }}
+                                            </p>
+                                            @enderror
+                                            <div class="login_footer form-group">
                                                 <div class="chek-form">
                                                     <div class="custome-checkbox">
-                                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox12" value="" />
+                                                        <input class="form-check-input" type="checkbox" name="checkbok" id="exampleCheckbox12" value="checkbok" />
                                                         <label class="form-check-label" for="exampleCheckbox12"><span>Tôi đồng ý với các điều khoản &amp; Chính Sách.</span></label>
                                                     </div>
                                                 </div>
-                                                <a href="page-privacy-policy.html"><i class="fi-rs-book-alt mr-5 text-muted"></i>Lean more</a>
+                                                <a href="page-privacy-policy.html"><i class="fi-rs-book-alt mr-5 text-muted"></i>Điều khoản</a>
                                             </div>
+                                            @error('checkbok')
+                                            <p class="text-danger">
+                                                {{ $message }}
+                                            </p>
+                                            @enderror
                                             <div class="form-group mb-30">
                                                 <button type="submit" class="btn btn-fill-out btn-block hover-up font-weight-bold" name="login">Đăng Ký</button>
                                             </div>
@@ -73,6 +148,14 @@
             </div>
         </div>
     </main>
+    <script>
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                blah.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
 @endsection
 @push('styles')
 @endpush

@@ -12,8 +12,8 @@
                         <p class="mb-20"><img src="assets/imgs/page/page-404.png" alt="" class="hover-up" /></p>
                         <h1 class="display-2 mb-30">Không Tìm Thấy Trang</h1>
                         <p class="font-lg text-grey-700 mb-30">
-                            Liên kết bạn nhấp vào có thể bị hỏng hoặc trang có thể đã bị xóa.<br />
-                            Truy cập<a href="{{route('index')}}"> <span> Trang Chủ</span></a> hoặc <a href="page-contact.html"><span>Liên Hệ</span></a> với chúng tôi vấn đề này.
+                        <p>{{session('error') ??''}}.</p>
+                            Truy cập<a href="{{route('index')}}"> <span> Trang Chủ</span></a> hoặc <a href="{{route('contact')}}"><span>Liên Hệ</span></a> với chúng tôi vấn đề này.
                         </p>
                         <div class="search-form">
                             <form action="#">
