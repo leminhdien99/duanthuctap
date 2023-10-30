@@ -10,7 +10,16 @@
                     <div class="col-xl-8 col-lg-10 col-md-12 m-auto">
                         <div class="row">
                             <div class="col-lg-6 pr-30 d-none d-lg-block">
-                                <img class="border-radius-15" src="assets/imgs/page/login-1.png" alt="" />
+                                <div class="card-login">
+                                    <a href="#" class="social-login facebook-login">
+                                        <img src="assets/imgs/theme/icons/logo-facebook.svg" alt="" />
+                                        <span>Đăng nhập với Facebook</span>
+                                    </a>
+                                    <a href="#" class="social-login google-login">
+                                        <img src="assets/imgs/theme/icons/logo-google.svg" alt="" />
+                                        <span>Đăng nhập với Google</span>
+                                    </a>
+                                </div>
                             </div>
                             <div class="col-lg-6 col-md-8">
                                 <div class="login_wrap widget-taber-content background-white">
@@ -62,7 +71,9 @@
                                         </form>
                                     </div>
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
                 </div>

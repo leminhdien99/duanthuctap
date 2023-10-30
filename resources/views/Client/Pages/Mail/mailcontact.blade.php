@@ -6,7 +6,6 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/><!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]--><!--[if !mso]><!-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css"/><!--<![endif]-->
-
 </head>
 <body style="background-color: #f2f0e9; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
 <table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f2f0e9;" width="100%">
@@ -118,13 +117,12 @@
                                     <table border="0" cellpadding="10" cellspacing="0" class="heading_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                                         <tr>
                                             <td class="pad">
-                                                <h2 style="margin: 0; color: #393d47; direction: ltr; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; font-size: 23px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;"><span class="tinyMce-placeholder">Chào {{$data->fullname}} đã đăng ký thành công tài khoản. Bạn có 15 phút để kích hoạt tài khoản. Xin vui lòng kích hoạt để đăng nhập vào tài khoản! ✨</span></h2>
+                                                <h2 style="margin: 0; color: #393d47; direction: ltr; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; font-size: 23px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0;"><span class="tinyMce-placeholder"><p style="font-weight: bold;">Xin chào {{$data['fullname']}}</p> Cảm ơn bạn đã liên hệ với chúng tôi. Đợi chúng tôi giây lát nhân viên sẽ liên hệ giải đáp thắc mắc bạn đang gặp phải nhé! ✨</span></h2>
                                             </td>
                                         </tr>
                                     </table>
                                     <table border="0" cellpadding="10" cellspacing="0" class="button_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%" align="center" >
                                         <tr align="center" >
-                                            <a href="{{route('active',$data->token)}}"style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#00464b;border-radius:0px;width:auto;border-top:1px solid #E7C390;font-weight:undefined;border-right:1px solid #E7C390;border-bottom:1px solid #E7C390;border-left:1px solid #E7C390;padding-top:5px;padding-bottom:5px;font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-size:16px;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:20px;padding-right:20px;font-size:16px;display:inline-block;letter-spacing:normal;"><span style="word-break: break-word; line-height: 32px;">Kích hoạt</span></span></a><!--[if mso]></center></v:textbox></v:roundrect><![endif]-->
                                         </tr>
                                     </table>
                                     <table border="0" cellpadding="0" cellspacing="0" class="paragraph_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">

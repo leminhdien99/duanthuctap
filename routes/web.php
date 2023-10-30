@@ -1,14 +1,36 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\Dashboard\ViewDashboardController;
 use App\Http\Controllers\Admin\Category\AddCategoryController;
 use App\Http\Controllers\Admin\Category\DeleteCategoryController;
 use App\Http\Controllers\Admin\Category\EditCategoryController;
 use App\Http\Controllers\Admin\Category\ListCategoryController;
-use App\Http\Controllers\Admin\Dashboard\ViewDashboardController;
+
+use App\Http\Controllers\Client\About\AboutController;
+use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
+use App\Http\Controllers\Client\BlogDetail\BlogDetailController;
+use App\Http\Controllers\Client\Pages\PolicyController;
+use App\Http\Controllers\Client\Pages\Product\DetailsController;
+use App\Http\Controllers\Client\Pages\Product\ProductController;
+use App\Http\Controllers\Client\Pages\Product\ClassProductController;
+use App\Http\Controllers\Client\Blog\BlogController;
+use App\Http\Controllers\Client\Account\AccountController;
+use App\Http\Controllers\Admin\Contact\AddContactController;
+use App\Http\Controllers\Admin\Contact\DeleteContactController;
+use App\Http\Controllers\Admin\Contact\ListContactController;
+
+use App\Http\Controllers\Client\ErrorController;
+use App\Http\Controllers\Client\Account\ForgetPasswordController;
+use App\Http\Controllers\Client\Account\LoginController;
+use App\Http\Controllers\Client\Account\RegisterController;
+use App\Http\Controllers\Client\Cart\CartController;
+use App\Http\Controllers\Client\CheckoutController;
+
+use App\Http\Controllers\Admin\Products\ListProductController;
 use App\Http\Controllers\Admin\Products\AddProductController;
 use App\Http\Controllers\Admin\Products\DeleteProductController;
 use App\Http\Controllers\Admin\Products\EditProductController;
-use App\Http\Controllers\Admin\Products\ListProductController;
 use App\Http\Controllers\Admin\User\AddUserController;
 use App\Http\Controllers\Admin\User\DeleteUserController;
 use App\Http\Controllers\Admin\User\EditUserController;
@@ -17,23 +39,6 @@ use App\Http\Controllers\Admin\Voucher\AddVoucherController;
 use App\Http\Controllers\Admin\Voucher\DeleteVoucherController;
 use App\Http\Controllers\Admin\Voucher\EditVoucherController;
 use App\Http\Controllers\Admin\Voucher\ListVoucherController;
-use App\Http\Controllers\Client\About\AboutController;
-use App\Http\Controllers\Client\Account\AccountController;
-use App\Http\Controllers\Client\Account\ForgetPasswordController;
-use App\Http\Controllers\Client\Account\LoginController;
-use App\Http\Controllers\Client\Account\RegisterController;
-use App\Http\Controllers\Client\Blog\BlogController;
-use App\Http\Controllers\Client\BlogDetail\BlogDetailController;
-use App\Http\Controllers\Client\Cart\CartController;
-use App\Http\Controllers\Client\CheckoutController;
-use App\Http\Controllers\Client\Contact\ContactController;
-use App\Http\Controllers\Client\ErrorController;
-use App\Http\Controllers\Client\Pages\PolicyController;
-use App\Http\Controllers\Client\Pages\Product\DetailsController;
-use App\Http\Controllers\Client\Pages\Product\ProductController;
-use App\Http\Controllers\Client\Pages\Product\ClassProductController;
-use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
-use Illuminate\Support\Facades\Route;
 
 
 // User and Voucher
@@ -82,9 +87,12 @@ Route::group(['prefix' => 'admin'], function (){
 
     Route::group(['prefix' => 'user'], function (){
         Route::get('/list', [ListUserController::class, 'listUser'])->name('listUser');
-        Route::get('/danh-sach-xoa-tai-khoan', [ListUserController::class, 'ListUserHistory'])->name('ListUserHistory');
-        Route::get('cap-nhat-trang-thai/{id}', [ListUserController::class, 'statusUser'])->name('statusUser');
-        Route::get('/chinh-sua/{id}', [EditUserController::class, 'editFormUser'])->name('editFormUser');
+        Route::get('/danh-sach-xoa-tai-khoan', [ListUserController::class, 'ListUserHistory'])
+             ->name('ListUserHistory');
+        Route::get('cap-nhat-trang-thai/{id}', [ListUserController::class, 'statusUser'])
+             ->name('statusUser');
+        Route::get('/chinh-sua/{id}', [EditUserController::class, 'editFormUser'])
+             ->name('editFormUser');
         Route::post('/chinh-sua/{id}', [EditUserController::class, 'editUser'])->name('editUser');
         Route::get('/them', [AddUserController::class, 'addFormUser'])->name('addUserForm');
         Route::post('/them', [AddUserController::class, 'formAddUser'])->name('addUser');
@@ -94,17 +102,38 @@ Route::group(['prefix' => 'admin'], function (){
     });
 
     Route::group(['prefix' => 'voucher'], function (){
-        Route::get('/danh-sach', [ListVoucherController::class, 'listVoucher'])->name('listVoucher');
-        Route::get('/danh-sach-xoa-voucher', [ListVoucherController::class, 'ListVoucherHistory'])->name('ListVoucherHistory');
-        Route::get('/xoa/{slug}', [DeleteVoucherController::class, 'deleteVoucher'])->name('deleteVoucher');
-        Route::get('/chinh-sua/{slug}', [EditVoucherController::class, 'editFormVoucher'])->name('editFormVoucher');
-        Route::post('/chinh-sua/{slug}', [EditVoucherController::class, 'editVoucher'])->name('editVoucher');
-        Route::get('/them', [AddVoucherController::class, 'addFormVoucher'])->name('addFormVoucher');
+        Route::get('/danh-sach', [ListVoucherController::class, 'listVoucher'])
+             ->name('listVoucher');
+        Route::get('/danh-sach-xoa-voucher', [ListVoucherController::class, 'ListVoucherHistory'])
+             ->name('ListVoucherHistory');
+        Route::get('/xoa/{slug}', [DeleteVoucherController::class, 'deleteVoucher'])
+             ->name('deleteVoucher');
+        Route::get('/chinh-sua/{slug}', [EditVoucherController::class, 'editFormVoucher'])
+             ->name('editFormVoucher');
+        Route::post('/chinh-sua/{slug}', [EditVoucherController::class, 'editVoucher'])
+             ->name('editVoucher');
+        Route::get('/them', [AddVoucherController::class, 'addFormVoucher'])
+             ->name('addFormVoucher');
         Route::post('/them', [AddVoucherController::class, 'addVoucher'])->name('addVoucher');
-        Route::get('trang-thai-voucher/{id}', [ListVoucherController::class, 'status'])->name('status');
-        Route::get('/khoi-phuc-voucher/{slug}', [DeleteVoucherController::class, 'VoucherRestor'])->name('VoucherRestor');
-        Route::get('/{id}', [ListCategoryController::class, 'StatusCategory'])->name('StatusCategory');
+        Route::get('trang-thai-voucher/{id}', [ListVoucherController::class, 'status'])
+             ->name('status');
+        Route::get('/khoi-phuc-voucher/{slug}', [DeleteVoucherController::class, 'VoucherRestor'])
+             ->name('VoucherRestor');
+        Route::get('/{id}', [ListCategoryController::class, 'StatusCategory'])
+             ->name('StatusCategory');
 
+    });
+    Route::group(['prefix' => 'lien-he'], function (){
+        Route::get('/danh-sach-lien-he', [ListContactController::class, 'listContact'])
+             ->name('listContact');
+        Route::get('/xoa-lien-he/{id}', [DeleteContactController::class, 'deleteContact'])
+             ->name('deleteContact');
+        Route::get('/khoi-phuc/{id}', [DeleteContactController::class, 'restoreContact'])
+             ->name('restoreContact');
+        Route::get('/trang-thai-lien-he/{id}', [ListContactController::class, 'statusContact'])
+             ->name('statusContact');
+        Route::get('/danh-sach-xoa-lien-he', [ListContactController::class, 'listDeleteContact'])
+             ->name('listDeleteContact');
     });
 
 });
@@ -135,7 +164,8 @@ Route::group(['prefix' => '/'], function (){
     Route::get('blog', [BlogController::class, 'blog'])->name('blog');
     Route::get('account', [AccountController::class, 'account'])->name('account');
     Route::get('about', [AboutController::class, 'about'])->name('about');
-    Route::get('contact', [ContactController::class, 'contact'])->name('contact');
+    Route::get('contact', [AddContactController::class, 'contact'])->name('contact');
+    Route::post('lien-he', [AddContactController::class, 'contactFrom'])->name('contactFrom');
     Route::get('wish-list', [ShopWishlistController::class, 'wishlist'])->name('wishlist');
     Route::get('blog-detail', [BlogDetailController::class, 'blogdetail'])->name('blogdetail');
     Route::get('forget-password', [ForgetPasswordController::class, 'fogetPassword'])
@@ -148,6 +178,8 @@ Route::group(['prefix' => '/'], function (){
          ->name('postResetPassword');
 
     Route::get('tai-khoan', [AccountController::class, 'account'])->name('account');
-    Route::post('sua-tai-khoan/{token}',[AccountController::class, 'updateProfile'])->name('updateProfile');
-    Route::post('doi-mat-khau/{token}',[AccountController::class, 'updatePassword'])->name('updatePassword');
+    Route::post('sua-tai-khoan/{token}', [AccountController::class, 'updateProfile'])
+         ->name('updateProfile');
+    Route::post('doi-mat-khau/{token}', [AccountController::class, 'updatePassword'])
+         ->name('updatePassword');
 });

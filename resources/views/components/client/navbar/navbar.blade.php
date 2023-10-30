@@ -112,7 +112,7 @@
                                     <a href="{{route('blog')}}">Bài viết</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('about')}}">Liên hệ</a>
+                                    <a href="{{route('contact')}}">Liên hệ</a>
                                 </li>
                                 <li class="position-static">
                                     <a href="#">Thực đơn <i class="fi-rs-angle-down"></i></a>

@@ -130,17 +130,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 pr-20 d-none d-lg-block">
-                                <div class="card-login mt-115">
-                                    <a href="#" class="social-login facebook-login">
-                                        <img src="assets/imgs/theme/icons/logo-facebook.svg" alt="" />
-                                        <span>Đăng nhập với Facebook</span>
-                                    </a>
-                                    <a href="#" class="social-login google-login">
-                                        <img src="assets/imgs/theme/icons/logo-google.svg" alt="" />
-                                        <span>Đăng nhập với Google</span>
-                                    </a>
-                                </div>
+                            <div class="col-lg-6 pr-20 d-none d-lg-block" style="padding-top: 200px;">
+                                <img class="border-radius-15" src="assets/imgs/page/login-1.png" alt="" />
                             </div>
                         </div>
                     </div>
