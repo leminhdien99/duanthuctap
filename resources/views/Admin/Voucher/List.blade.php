@@ -30,8 +30,10 @@
 
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <x-admin.buttom.add router="addVoucher" name="Thêm mã giảm giá"></x-admin.buttom.add>
-                        <table id="example1" class="table table-bordered table-striped">
+                        <div class="d-flex justify-content-between">
+                            <x-admin.buttom.add router="addVoucher" name="Thêm mã giảm giá"></x-admin.buttom.add>
+                            <x-admin.buttom.add router="ListVoucherHistory" name="Lịch sử xoá"></x-admin.buttom.add>
+                        </div>                        <table id="example1" class="table table-bordered table-striped">
                             @if(session('success'))
                                 <div class="alert alert-success">
                                     {{ session('success') }}
@@ -84,12 +86,15 @@
         </div>
     </div>
 @endsection
-
+<style>
+	img{
+		object-fit: cover;
+	}
 @push('js')
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-    <!-- Bootstrap 4 -->
+
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- DataTables & Plugins -->
+
     <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>

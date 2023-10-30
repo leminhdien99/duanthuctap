@@ -89,28 +89,29 @@ Route::group(['prefix' => 'admin'], function (){
 
     Route::group(['prefix' => 'user'], function (){
         Route::get('/list', [ListUserController::class, 'listUser'])->name('listUser');
-        Route::get('/edit/{id}', [EditUserController::class, 'editFormUser'])->name('editFormUser');
-        Route::post('/edit/{id}', [EditUserController::class, 'editUser'])->name('editUser');
-        Route::get('/add', [AddUserController::class, 'addFormUser'])->name('addUserForm');
-        Route::post('/add', [AddUserController::class, 'formAddUser'])->name('addUser');
-        Route::get('/delete/{id}', [DeleteUserController::class, 'deleteUser'])->name('deleteUser');
-        Route::get('statusUser/{id}', [ListUserController::class, 'statusUser'])
-             ->name('statusUser');
+        Route::get('/danh-sach-xoa-tai-khoan', [ListUserController::class, 'ListUserHistory'])->name('ListUserHistory');
+        Route::get('cap-nhat-trang-thai/{id}', [ListUserController::class, 'statusUser'])->name('statusUser');
+        Route::get('/chinh-sua/{id}', [EditUserController::class, 'editFormUser'])->name('editFormUser');
+        Route::post('/chinh-sua/{id}', [EditUserController::class, 'editUser'])->name('editUser');
+        Route::get('/them', [AddUserController::class, 'addFormUser'])->name('addUserForm');
+        Route::post('/them', [AddUserController::class, 'formAddUser'])->name('addUser');
+        Route::get('/xoa/{slug}', [DeleteUserController::class, 'deleteUser'])->name('deleteUser');
+        Route::get('/khoi-phuc-tai-khoan/{id}', [DeleteUserController::class, 'userRestore'])
+             ->name('userRestore');
     });
 
     Route::group(['prefix' => 'voucher'], function (){
-        Route::get('/list', [ListVoucherController::class, 'listVoucher'])->name('listVoucher');
-        Route::get('/delete/{slug}', [DeleteVoucherController::class, 'deleteVoucher'])
-             ->name('deleteVoucher');
-        Route::get('/edit/{slug}', [EditVoucherController::class, 'editFormVoucher'])
-             ->name('editFormVoucher');
-        Route::post('/edit/{slug}', [EditVoucherController::class, 'editVoucher'])
-             ->name('editVoucher');
-        Route::get('/add', [AddVoucherController::class, 'addFormVoucher'])->name('addFormVoucher');
-        Route::post('/add', [AddVoucherController::class, 'addVoucher'])->name('addVoucher');
-        Route::get('status/{id}', [ListVoucherController::class, 'status'])->name('status');
-        Route::get('/{id}', [ListCategoryController::class, 'StatusCategory'])
-             ->name('StatusCategory');
+        Route::get('/danh-sach', [ListVoucherController::class, 'listVoucher'])->name('listVoucher');
+        Route::get('/danh-sach-xoa-voucher', [ListVoucherController::class, 'ListVoucherHistory'])->name('ListVoucherHistory');
+        Route::get('/xoa/{slug}', [DeleteVoucherController::class, 'deleteVoucher'])->name('deleteVoucher');
+        Route::get('/chinh-sua/{slug}', [EditVoucherController::class, 'editFormVoucher'])->name('editFormVoucher');
+        Route::post('/chinh-sua/{slug}', [EditVoucherController::class, 'editVoucher'])->name('editVoucher');
+        Route::get('/them', [AddVoucherController::class, 'addFormVoucher'])->name('addFormVoucher');
+        Route::post('/them', [AddVoucherController::class, 'addVoucher'])->name('addVoucher');
+        Route::get('trang-thai-voucher/{id}', [ListVoucherController::class, 'status'])->name('status');
+        Route::get('/khoi-phuc-voucher/{slug}', [DeleteVoucherController::class, 'VoucherRestor'])->name('VoucherRestor');
+        Route::get('/{id}', [ListCategoryController::class, 'StatusCategory'])->name('StatusCategory');
+
     });
 
 });
@@ -151,4 +152,8 @@ Route::group(['prefix' => '/'], function (){
          ->name('resetPassword');
     Route::post('reset-password/{token}', [ForgetPasswordController::class, 'postResetPassword'])
          ->name('postResetPassword');
+
+    Route::get('tai-khoan', [AccountController::class, 'account'])->name('account');
+    Route::post('sua-tai-khoan/{token}',[AccountController::class, 'updateProfile'])->name('updateProfile');
+    Route::post('doi-mat-khau/{token}',[AccountController::class, 'updatePassword'])->name('updatePassword');
 });

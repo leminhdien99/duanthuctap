@@ -18,9 +18,23 @@ class DeleteVoucherController extends Controller
         $condition = [
             ['slug', '=', $slug],
         ];
+        $value = [
+            'delete' => 1,
+        ];
 
-        $this->voucher->deleteVoucher($condition);
+        $this->voucher->updateVoucher($condition, $value);
+        return redirect()->back()->with('success', 'Đã xoá mềm voucher thành công');
+    }
 
-        return redirect()->route('listVoucher')->with('success', 'Xoá voucher" ' .$slug. ' " thành công');
+    function VoucherRestor($slug)
+    {
+        $condition = [
+            ['slug', '=', $slug],
+        ];
+        $value = [
+            'delete' => 0,
+        ];
+        $data = $this->voucher->updateVoucher($condition, $value);
+        return redirect()->back()->with('success', 'Đã khôi phục voucher thành công');
     }
 }

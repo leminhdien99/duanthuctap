@@ -47,7 +47,11 @@ class User extends Authenticatable
             ->update($data);
     }
 
-
+    public function deleteUser()
+    {
+        // Xóa tài khoản
+        $this->delete();
+    }
 
     public function listUser($condition){
 

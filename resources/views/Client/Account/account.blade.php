@@ -27,6 +27,9 @@
                                             <a class="nav-link" id="track-orders-tab" data-bs-toggle="tab" href="#track-orders" role="tab" aria-controls="track-orders" aria-selected="false"><i class="fi-rs-shopping-cart-check mr-10"></i>Theo dõi đơn hàng</a>
                                         </li>
                                         <li class="nav-item">
+                                            <a class="nav-link" id="wallet-tab" data-bs-toggle="tab" href="#wallet" role="tab" aria-controls="wallet" aria-selected="false"><i class="ti-rs-wallet"></i>Ví của tôi</a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" id="address-tab" data-bs-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="true"><i class="fi-rs-marker mr-10"></i>Địa chỉ của tôi</a>
                                         </li>
                                         <li class="nav-item">
@@ -107,30 +110,7 @@
                                     </div>
 
                                     <div class="tab-pane fade" id="track-orders" role="tabpanel" aria-labelledby="track-orders-tab">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h3 class="mb-0">Theo dõi đơn hàng</h3>
-                                            </div>
-                                            <div class="card-body contact-from-area">
-                                                <p>Để theo dõi đơn hàng của bạn, vui lòng nhập ID đơn hàng của bạn vào ô bên dưới và nhấn nút "Theo dõi".
-                                                    Điều này đã được trao cho bạn trên biên nhận của bạn và trong email xác nhận mà lẽ ra bạn phải nhận được.</p>
-                                                <div class="row">
-                                                    <div class="col-lg-8">
-                                                        <form class="contact-form-style mt-30 mb-50" action="#" method="post">
-                                                            <div class="input-style mb-20">
-                                                                <label>ID Đơn hàng</label>
-                                                                <input name="order-id" placeholder="Tìm thấy trong email xác nhận đặt hàng của bạn" type="text"/>
-                                                            </div>
-                                                            <div class="input-style mb-20">
-                                                                <label>Thanh toán bằng thư điện tử</label>
-                                                                <input name="billing-email" placeholder="Email bạn đã sử dụng để đặt hàng" type="email"/>
-                                                            </div>
-                                                            <button class="submit submit-auto-width" type="submit">Theo dõi</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <x-client.pages.ordertracking></x-client.pages.ordertracking>
                                     </div>
 
                                     <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
@@ -168,8 +148,12 @@
                                         </div>
                                     </div>
 
+                                    <div class="tab-pane fade" id="wallet" role="tabpanel" aria-labelledby="wallet-tab">
+                                        <x-client.account.wallet></x-client.account.wallet>
+                                    </div>
+
                                     <div class="tab-pane fade" id="account-detail" role="tabpanel" aria-labelledby="account-detail-tab">
-                                        <x-client.account.account></x-client.account.account>
+                                        <x-client.account.profile></x-client.account.profile>
                                     </div>
 
                                     <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">

@@ -40,7 +40,6 @@ class AddUserController extends Controller{
             'gender'   => $request->gender,
             'phone'    => $request->phone,
             'address'  => $request->address,
-            'dateinput' => now(),
             'password' => Hash::make($request->password),
             'image'    => $fileName,
         ];
