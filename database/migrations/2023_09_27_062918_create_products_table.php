@@ -17,8 +17,11 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->integer('quantify');
             $table->bigInteger('price');
+            $table->bigInteger('sale_price')->nullable();
             $table->tinyInteger('status')->default(0);
             $table->tinyInteger('delete')->default(0);
+            $table->integer('view')->default(0);
+            $table->integer('selling')->default(0);
             $table->longText('describe');
             $table->timestamps();
         });

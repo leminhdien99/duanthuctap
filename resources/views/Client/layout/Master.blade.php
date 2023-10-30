@@ -13,7 +13,6 @@
     <meta property="og:image" content="" />
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/imgs/theme/favicon.svg')}}" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.svg"/>
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/main.css?v=5.6')}}" />
@@ -22,6 +21,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/main.css?v=5.6')}}"/>
     @yield('js')
+    @stack('link')
 </head>
 <body>
 

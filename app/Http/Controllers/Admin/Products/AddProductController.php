@@ -31,11 +31,21 @@ class AddProductController extends Controller
             'name' => $request->name,
             'slug' => Str::slug($request->name),
             'describe'=> $request->describe,
-            'price'=> $request->price,
+            'price' => $request->price,
+            'sale_price' => $request->sale_price,
             'quantify'=>$request->quantify,
             'created_at'=>now(),
         ];
+        $price = $request->price;
+        $salePrice = $request->sale_price;
+        $displayPrice = $salePrice ? $salePrice : $price; // Sử dụng giá giảm nếu có, nếu không sử dụng giá bán
+
+        if ($salePrice && $salePrice >= $price) {
+            return redirect()->back()->withInput()->withErrors(['sale_price' => 'Giá khuyến mãi phải nhỏ hơn giá bán.']);
+        }
+
         $idProduct = $this->product->addProduct($value);
+
         $countId = count($request->category);
         if ($countId>0){
             for ($i = 0; $i < $countId; $i++){
@@ -55,7 +65,7 @@ class AddProductController extends Controller
                 for ($i = 0; $i < $countImg; $i++) {
                     $randomName = Str::random(10);
                     $filename = time().$randomName.'-'.'product'.'.'.$request->uploadfile[$i]->extension();
-                    $request->uploadfile[$i]->move(public_path("images"), $filename);
+                    $request->uploadfile[$i]->move(public_path("images/products"), $filename);
                     $request->merge(['image' => $filename]);
                     // Thay đổi 'image' thành 'images' trong mảng dữ liệu
                     $data = [
@@ -66,6 +76,6 @@ class AddProductController extends Controller
                 }
             }
         }
-        return redirect()->route('listProduct')->with('success', 'Thêm sản phẩm " ' . $request->name . ' " thành công');
+        return redirect()->route('listProduct')->with('success', 'Thêm sản phẩm " ' . $request->name . ' " thành công Giá bán: ' . $displayPrice);
     }
 }

@@ -13,16 +13,6 @@ class DeleteProductController extends Controller{
         $this->products = new Product();
     }
 
-    function deleteProduct($id){
-
-        // Tìm bài viết cần xóa
-        $product = Product::findOrFail($id);
-        // Xóa bài viết và liên kết trong bảng "media" thông qua phương thức trong Model
-        $product->deleteProduct();
-
-        return redirect()->back()->with('success', 'sản phẩm đã được xóa thành công.');
-
-    }
 
     function deleteHistory($slug){
         $condition = [

@@ -90,18 +90,17 @@
                         <nav>
                             <ul>
                                 <li class="hot-deals">
-                                    <img src="assets/imgs/theme/icons/icon-hot.svg" alt="hot deals"/><a href="{{ route('product_deals') }}">Giảm giá</a>
+                                    <img src="assets/imgs/theme/icons/icon-hot.svg" alt="hot deals"/><a href="{{ route('sale_product') }}">Giảm giá</a>
                                 </li>
                                 <li>
                                     <a class="active" href="{{ route('index') }}">Trang chủ </a>
                                 </li>
                                 <li>
-                                    <a href="shop-grid-right.html">Sản phẩm <i class="fi-rs-angle-down"></i></a>
+                                    <a href="{{ route('product') }}">Sản phẩm <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Cơm gà</a></li>
-                                        <li><a href="shop-filter.html">Cơm chân gà</a></li>
-                                        <li><a href="shop-wishlist.html">Cơm đùi gà</a></li>
-                                        <li><a href="shop-cart.html">Cơm ức gà</a></li>
+                                        @foreach($dataToCategory as $category)
+                                            <li><a href="{{route('class',$category->slug)}}">{{$category->name}}</a></li>
+                                        @endforeach
 
                                     </ul>
                                 </li>

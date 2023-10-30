@@ -26,7 +26,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
-                            <x-admin.buttom.add :router="$page=='product'?'addProduct':''" :name="$page=='product'?'Thêm bài viết':''"></x-admin.buttom.add>
+                            <x-admin.buttom.add :router="$page=='product'?'addProduct':''" :name="$page=='product'?'Thêm sản phẩm':''"></x-admin.buttom.add>
                             <x-admin.buttom.add :router="$page=='product'?'listProduct':''" :name="$page=='product'?'Quay lại':''"></x-admin.buttom.add>
                         </div>
                         <table id="example1" class="table table-bordered table-striped">
@@ -58,12 +58,11 @@
                                     <td>{{ number_format($item->price, 0, ',', '.') }}VND</td>
                                     <td>
                                         <a class="btn btn-primary mb-3" href="{{route('restoreProduct',$item->slug)}}">Khôi phục</a>
-                                        <a class="btn btn-danger mb-3" href="{{route('deleteProduct',$item->id)}}">Xóa vĩnh viễn</a>
                                 </tr>
                             @endforeach
                             </tbody>
-
                         </table>
+                        <div class="mt-3">{{ $query->links() }}</div>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -95,25 +94,6 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('dist/js/demo.js') }}"></script>
     <!-- Page specific script -->
-    <script>
-        $(function () {
-            $("#example1").DataTable({
-                "responsive": true,
-                "lengthChange": false,
-                "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-                "responsive": true,
-            });
-        });
-    </script>
 
 @endpush
 <!-- HTML !-->

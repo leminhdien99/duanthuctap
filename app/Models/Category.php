@@ -20,6 +20,9 @@ class Category extends Model
 
         return $this->insert($value);
     }
+    public function getId($where){
+        return $this->select('id')->where($where)->first()->id;
+    }
 
     public function editCategory($condition)
     {
@@ -29,6 +32,11 @@ class Category extends Model
     public function updateCategory($value, $condition)
     {
         return $this->where($condition)->update($value);
+    }
+
+    public function GetCategory()
+    {
+        return $this->get();
     }
 
     public function deleteCategory($slug)

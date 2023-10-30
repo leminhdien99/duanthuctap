@@ -25,10 +25,12 @@ class EditProductController extends Controller
         $where = [
             'products.slug' => $slug,
         ];
+        $idProduct = $this->product->getIdProduct($where);
+        $whereImg =[
+            'id_products' => $idProduct,
+        ];
         $data = $this->product->getProduct($where);
-//        dd($data);
-        $img = $this->product->getProductImage($where);
-
+        $img = $this->product->getProductImage($whereImg);
         $category = $this->product->Show($condition = [], 'categories');
         return view('admin.product.edit',['page'=>'product', 'data'=>$data, 'category'=>$category ,'img'=>$img]);
     }
@@ -46,8 +48,15 @@ class EditProductController extends Controller
             'slug' => Str::slug($request->name),
             'describe'=> $request->describe,
             'price'=> $request->price,
+            'sale_price' => $request->sale_price,
             'quantify'=>$request->quantify,
         ];
+//        $salePrice = $request->sale_price;
+
+        if ($request->sale_price && $request->sale_price >= $request->price) {
+            return redirect()->back()->withInput()->withErrors(['sale_price' => 'Giá khuyến mãi phải nhỏ hơn giá bán.']);
+        }
+
         $condition = [
             ['slug', '=', $slug],
         ];
@@ -62,14 +71,16 @@ class EditProductController extends Controller
             if ($countImg > 0) {
                 for ($i = 0; $i < $countImg; $i++) {
                     $filename = time().$i.'-'.'product'.'.'.$request->uploadfile[$i]->extension();
-                    $request->uploadfile[$i]->move(public_path("images"), $filename);
+                    $request->uploadfile[$i]->move(public_path("images/products"), $filename);
                     $request->merge(['image' => $filename]);
                     // Thay đổi 'image' thành 'images' trong mảng dữ liệu
                     $data = [
                         "image" => $request->image, // Thay đổi 'image' thành 'images' ở đây
                         "id_products" =>  $request->id_product,
                     ];
+//                    dd($data);
                     $this->image->addImage($data); // Chỉnh sửa thành 'addMedia'
+
                 }
             }
         }
@@ -83,6 +94,6 @@ class EditProductController extends Controller
                 ];
                 $this->intermedia->addIntermedia($data);
             }
-        return redirect()->route('listProduct')->with('success', 'Sửa sản phẩm " ' . $request->name . ' " thành công!');
+        return redirect()->route('listProduct')->with('success', 'Sửa sản phẩm "' . $request->name . '" thành công!');
     }
 }

@@ -169,7 +169,7 @@
 
                             @foreach($images as $key => $image)
                                 <div class="d-flex " >
-                                    <img src="{{ asset('images/' . $image) }}" alt="Image" />
+                                    <img src="{{ asset('images/products/' . $image) }}" alt="Image" />
                                 </div>
                                     <a class="btn btn-danger custom-button"  href="{{ route('deleteImage', $ids[$key]) }}">X</a>
                             @endforeach
@@ -188,6 +188,13 @@
                         @enderror
                         <label for="price" class="form-label">Giá</label>
                         <input type="number" class="form-control" name="price" value="{{ $data->price }}" id="price">
+                    </div>
+                    <div class="mb-3">
+                        @error('sale_price')
+                        <div class="alert alert-danger mt-3">{{ $message }}</div>
+                        @enderror
+                        <label for="sale_price" class="form-label">Giá khuyến mãi</label>
+                        <input type="number" class="form-control" name="sale_price" value="{{ $data->sale_price }}" id="sale_price">
                     </div>
                     <div class="mb-3">
                         @error('quantify')

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\Client\pages;
+namespace App\View\Components\Client\pages\product;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class home extends Component
+class product extends Component
 {
     public $product;
     public function __construct($product)
@@ -19,6 +19,6 @@ class home extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.client.pages.home');
+        return view('components.client.pages.product.product');
     }
 }

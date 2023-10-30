@@ -1,39 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Client\Pages\HomeController;
-use App\Http\Controllers\Admin\Dashboard\ViewDashboardController;
 use App\Http\Controllers\Admin\Category\AddCategoryController;
 use App\Http\Controllers\Admin\Category\DeleteCategoryController;
 use App\Http\Controllers\Admin\Category\EditCategoryController;
 use App\Http\Controllers\Admin\Category\ListCategoryController;
-
-use App\Http\Controllers\Client\About\AboutController;
-use App\Http\Controllers\Client\Contact\ContactController;
-use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
-use App\Http\Controllers\Client\BlogDetail\BlogDetailController;
-use App\Http\Controllers\Client\Product\ProductController;
-use App\Http\Controllers\Client\Product\ProductDealsController;
-use App\Http\Controllers\Client\Blog\BlogController;
-use App\Http\Controllers\Client\Account\AccountController;
-
-
-use App\Http\Controllers\Client\Pages\PolicyController;
-use App\Http\Controllers\Client\Pages\Product\DetailsController;
-use App\Http\Controllers\Client\ErrorController;
-use App\Http\Controllers\Client\Account\ForgetPasswordController;
-use App\Http\Controllers\Client\Account\LoginController;
-use App\Http\Controllers\Client\Account\RegisterController;
-use App\Http\Controllers\Client\Cart\CartController;
-use App\Http\Controllers\Client\CheckoutController;
-
-use App\Http\Controllers\Admin\Products\ListProductController;
+use App\Http\Controllers\Admin\Dashboard\ViewDashboardController;
 use App\Http\Controllers\Admin\Products\AddProductController;
 use App\Http\Controllers\Admin\Products\DeleteProductController;
 use App\Http\Controllers\Admin\Products\EditProductController;
-
-
-// User and Voucher
+use App\Http\Controllers\Admin\Products\ListProductController;
 use App\Http\Controllers\Admin\User\AddUserController;
 use App\Http\Controllers\Admin\User\DeleteUserController;
 use App\Http\Controllers\Admin\User\EditUserController;
@@ -42,6 +17,26 @@ use App\Http\Controllers\Admin\Voucher\AddVoucherController;
 use App\Http\Controllers\Admin\Voucher\DeleteVoucherController;
 use App\Http\Controllers\Admin\Voucher\EditVoucherController;
 use App\Http\Controllers\Admin\Voucher\ListVoucherController;
+use App\Http\Controllers\Client\About\AboutController;
+use App\Http\Controllers\Client\Account\AccountController;
+use App\Http\Controllers\Client\Account\ForgetPasswordController;
+use App\Http\Controllers\Client\Account\LoginController;
+use App\Http\Controllers\Client\Account\RegisterController;
+use App\Http\Controllers\Client\Blog\BlogController;
+use App\Http\Controllers\Client\BlogDetail\BlogDetailController;
+use App\Http\Controllers\Client\Cart\CartController;
+use App\Http\Controllers\Client\CheckoutController;
+use App\Http\Controllers\Client\Contact\ContactController;
+use App\Http\Controllers\Client\ErrorController;
+use App\Http\Controllers\Client\Pages\PolicyController;
+use App\Http\Controllers\Client\Pages\Product\DetailsController;
+use App\Http\Controllers\Client\Pages\Product\ProductController;
+use App\Http\Controllers\Client\Pages\Product\ClassProductController;
+use App\Http\Controllers\Client\ShopWishlist\ShopWishlistController;
+use Illuminate\Support\Facades\Route;
+
+
+// User and Voucher
 
 
 Route::group(['prefix' => 'admin'], function (){
@@ -74,8 +69,6 @@ Route::group(['prefix' => 'admin'], function (){
              ->name('editProduct');
         Route::post('/edit/{slug}', [EditProductController::class, 'updateProduct'])
              ->name('editProduct');
-        Route::get('/delete/{id}', [DeleteProductController::class, 'deleteProduct'])
-             ->name('deleteProduct');
         Route::get('/deleteHistory/{slug}', [DeleteProductController::class, 'deleteHistory'])
              ->name('deleteHistory');
         Route::get('/restore/{slug}', [DeleteProductController::class, 'restoreProduct'])
@@ -117,7 +110,7 @@ Route::group(['prefix' => 'admin'], function (){
 });
 
 Route::group(['prefix' => '/'], function (){
-    Route::get('', [HomeController::class, 'index'])->name('index');
+    Route::get('', [ProductController::class, 'product'])->name('index');
     Route::group(['prefix' => 'cart'], function (){
         Route::get('list', [CartController::class, 'list'])->name('listCart');
         Route::get('add', [CartController::class, 'add'])->name('addCart');
@@ -125,10 +118,11 @@ Route::group(['prefix' => '/'], function (){
     });
 
 
-    Route::get('product', [ProductController::class, 'product'])->name('product');
-    Route::get('deals', [ProductDealsController::class, 'product_deals'])->name('product_deals');
+    Route::get('product', [ProductController::class, 'listProduct'])->name('product');
+    Route::get('product/{slug}', [ClassProductController::class, 'class'])->name('class');
+    Route::get('deals', [ProductController::class, 'saleProduct'])->name('sale_product');
 
-    Route::get('details', [DetailsController::class, 'Details'])->name('details');
+    Route::get('details/{slug}', [DetailsController::class, 'Details'])->name('details');
     Route::get('policy', [PolicyController::class, 'Policy'])->name('policy');
     Route::get('404', [ErrorController::class, 'enror'])->name('error');
     Route::get('login', [LoginController::class, 'login'])->name('login');

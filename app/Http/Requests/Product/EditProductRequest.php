@@ -31,6 +31,7 @@ class EditProductRequest extends FormRequest
             ],
             'describe' => 'required',
             'price' => 'required|numeric|min:0',
+            'sale_price' => 'nullable|numeric|min:0',
             'quantify' => 'required|numeric|min:0',
             'category' => 'required',
         ];
@@ -47,6 +48,8 @@ class EditProductRequest extends FormRequest
             'price.required' => 'Vui lòng nhập giá',
             'price.numeric' => 'Giá phải là một số',
             'price.min' => 'Giá không được là số âm',
+            'sale_price.numeric' => 'Giá giảm phải là một số',
+            'sale_price.min' => 'Giá giảm không được là số âm',
             'quantify.required' => 'vui lòng nhập số lượng',
             'quantify.numeric' => 'Số lượng phải là một số',
             'quantify.min' => 'Số lượng không được âm',

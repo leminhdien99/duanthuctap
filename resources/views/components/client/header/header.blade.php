@@ -1,51 +1,5 @@
 <!-- hiển thị thông báo  -->
-<div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            <div class="modal-body">
-                <div class="deal">
-                    <div class="deal-top">
-                        <h6 class="mb-10 text-brand-2">Giao dịch trong ngày</h6>
-                    </div>
-                    <div class="deal-content detail-info">
-                        <h4 class="product-title"><a href="shop-product-right.html" class="text-heading">Cơm gạo tốt
-                                nhất
-                                vì sức khỏe gia đình bạn</a></h4>
-                        <div class="clearfix product-price-cover">
-                            <div class="product-price primary-color float-left">
-                                <span class="current-price text-brand">$38</span>
-                                <span>
-                                    <span class="save-price font-md color3 ml-15">26% Off</span>
-                                    <span class="old-price font-md ml-15">$52</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="deal-bottom">
-                        <p class="mb-20">Nhanh lên! Ưu đãi kết thúc vào:</p>
-                        <div class="deals-countdown pl-5" data-countdown="2025/03/25 00:00:00">
-                            <span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> Ngày </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> giờ
-                                </span></span><span class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> phút
-                                </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> giây
-                                </span></span>
-                        </div>
-                        <div class="product-detail-rating">
-                            <div class="product-rate-cover text-end">
-                                <div class="product-rate d-inline-block">
-                                    <div class="product-rating" style="width: 90%"></div>
-                                </div>
-                                <span class="font-small ml-5 text-muted"> (32 rates)</span>
-                            </div>
-                        </div>
-                        <a href="shop-grid-right.html" class="btn hover-up">Mua ngay
-                            <i class="fi-rs-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{--<div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true">--}}{{--    <div class="modal-dialog">--}}{{--        <div class="modal-content">--}}{{--            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}{{--            <div class="modal-body">--}}{{--                <div class="deal" style="background-image: url('assets/imgs/banner/popup-1.png')">--}}{{--                    <div class="deal-top">--}}{{--                        <h6 class="mb-10 text-brand-2">Giao dịch trong ngày</h6>--}}{{--                    </div>--}}{{--                    <div class="deal-content detail-info">--}}{{--                        <h4 class="product-title"><a href="shop-product-right.html" class="text-heading">Cơm gạo tốt--}}{{--                                nhất--}}{{--                                vì sức khỏe gia đình bạn</a></h4>--}}{{--                        <div class="clearfix product-price-cover">--}}{{--                            <div class="product-price primary-color float-left">--}}{{--                                <span class="current-price text-brand">$38</span>--}}{{--                                <span>--}}{{--                                    <span class="save-price font-md color3 ml-15">26% Off</span>--}}{{--                                    <span class="old-price font-md ml-15">$52</span>--}}{{--                                </span>--}}{{--                            </div>--}}{{--                        </div>--}}{{--                    </div>--}}{{--                    <div class="deal-bottom">--}}{{--                        <p class="mb-20">Nhanh lên! Ưu đãi kết thúc vào:</p>--}}{{--                        <div class="deals-countdown pl-5" data-countdown="2025/03/25 00:00:00">--}}{{--                            <span class="countdown-section"><span class="countdown-amount hover-up">03</span><span class="countdown-period"> Ngày </span></span><span class="countdown-section"><span class="countdown-amount hover-up">02</span><span class="countdown-period"> giờ--}}{{--                                </span></span><span class="countdown-section"><span class="countdown-amount hover-up">43</span><span class="countdown-period"> phút--}}{{--                                </span></span><span class="countdown-section"><span class="countdown-amount hover-up">29</span><span class="countdown-period"> giây--}}{{--                                </span></span>--}}{{--                        </div>--}}{{--                        <div class="product-detail-rating">--}}{{--                            <div class="product-rate-cover text-end">--}}{{--                                <div class="product-rate d-inline-block">--}}{{--                                    <div class="product-rating" style="width: 90%"></div>--}}{{--                                </div>--}}{{--                                <span class="font-small ml-5 text-muted"> (32 rates)</span>--}}{{--                            </div>--}}{{--                        </div>--}}{{--                        <a href="shop-grid-right.html" class="btn hover-up">Mua ngay--}}{{--                            <i class="fi-rs-arrow-right"></i></a>--}}{{--                    </div>--}}{{--                </div>--}}{{--            </div>--}}{{--        </div>--}}{{--    </div>--}}{{--</div>--}}
 
 <div class="modal fade custom-modal" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -216,12 +170,10 @@
                 <div class="header-right">
                     <div class="search-style-2">
                         <form action="#">
-                            <select class="select-active">
-                                <option>Danh mục</option>
-                                <option>Cơm và các sản phẩm từ cơm</option>
-                            </select>
-                            <input type="text" placeholder="
-                            Tìm kiếm các mục..."/>
+                            <input type="text" placeholder="Tìm kiếm các mục..."/>
+                            <button type="submit" style="color: white" class="btn btn-outline-light">
+                                <i class="fa fa-search"></i> <!-- Thay "fa fa-search" bằng class của biểu tượng bạn muốn sử dụng -->
+                            </button>
                         </form>
                     </div>
                     <div class="header-action-right">
@@ -283,9 +235,9 @@
                                         </div>
                                         <div class="shopping-cart-button">
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
 
                             <div class="header-action-icon-2">
@@ -296,42 +248,41 @@
                                 <a href="{{ route('account') }}"><span class="lable ml-0">Tài khoản</span></a>
                                 <a href="{{auth()->check() != '' ? route('account'):route('login')}}"><i class="ti-user"></i><span class="lable"> {{auth()->check() != '' ? 'Tài khoản':'Đăng nhập'}}</span></a>
 
-                            @if(auth()->check())
+                                @if(auth()->check())
                                     <a class="px-2" href="{{route('logout')}}"><span class="lable">Đăng xuất</span></a>
                                 @endif </div>
-                            </div>
+                        </div>
 
-                            <div class="header-action-icon-2">
+                        <div class="header-action-icon-2">
 
-                                <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fi fi-rs-user mr-10"></i>
-                                                Tài khoản của tôi</a>
-                                            <a href="{{route('register')}}"><i class="fi fi-rs-id-badge mr-10"></i>
-                                                Đăng ký</a>
-                                        </li>
-                                        <li>
-                                            <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>
-                                                Tài khoản của tôi</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fi fi-rs-location-alt mr-10"></i>Theo dõi đơn hàng</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fi fi-rs-label mr-10"></i>Voucher
-                                                của tôi</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('wishlist')}}"><i class="fi fi-rs-heart mr-10"></i>Danh sách
-                                                yêu thích</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fi fi-rs-settings-sliders mr-10"></i>Cài đặt</a>
-                                        </li>
+                            <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="fi fi-rs-user mr-10"></i>
+                                            Tài khoản của tôi</a>
+                                        <a href="{{route('register')}}"><i class="fi fi-rs-id-badge mr-10"></i>
+                                            Đăng ký</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>
+                                            Tài khoản của tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fi fi-rs-location-alt mr-10"></i>Theo dõi đơn hàng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fi fi-rs-label mr-10"></i>Voucher
+                                            của tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('wishlist')}}"><i class="fi fi-rs-heart mr-10"></i>Danh sách
+                                            yêu thích</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fi fi-rs-settings-sliders mr-10"></i>Cài đặt</a>
+                                    </li>
 
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -339,5 +290,5 @@
             </div>
         </div>
     </div>
-</header>
-<!--Kết thúc cấu trúc phần header  -->
+    </div>
+</header><!--Kết thúc cấu trúc phần header  -->

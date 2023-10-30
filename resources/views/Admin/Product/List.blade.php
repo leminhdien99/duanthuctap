@@ -29,7 +29,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
-                            <x-admin.buttom.add :router="$page=='product'?'addProduct':''" :name="$page=='product'?'Thêm bài viết':''"></x-admin.buttom.add>
+                            <x-admin.buttom.add :router="$page=='product'?'addProduct':''" :name="$page=='product'?'Thêm sản phẩm':''"></x-admin.buttom.add>
                             <x-admin.buttom.add :router="$page=='product'?'listHistory':''" :name="$page=='product'? 'Thùng rác':''"></x-admin.buttom.add>
                         </div>
                         <table id="example1" class="table table-bordered table-striped">
@@ -47,6 +47,7 @@
                                 <th>Ngày tạo</th>
                                 <th>Ngày cập nhật</th>
                                 <th>Giá</th>
+                                <th>Giá khuyến mãi</th>
                                 <th>Trạng thái</th>
                                 <th>Nghiệp vụ</th>
                             </tr>
@@ -61,7 +62,8 @@
 
                                     <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
                                     <td>{{ date('d-m-Y', strtotime($item->updated_at)) }}</td>
-                                    <td>{{ number_format($item->price, 0, ',', '.') }}VND</td>
+                                    <td>{{ number_format($item->price, 0, ',', '.') }}đ</td>
+                                    <td>{{ number_format($item->sale_price, 0, ',', '.') }}đ</td>
                                     <td>
                                         <a href="{{route('StatusProduct', $item->id)}}" class="btn btn-sm btn-{{$item->status ? 'success':'danger'}}">
                                             {{$item->status ? 'Hiện':'Ẩn'}}

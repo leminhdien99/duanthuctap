@@ -157,6 +157,13 @@
                         <input type="number" class="form-control" name="price" value="{{ old($page == "product" ? 'price' : '') }}" id="price">
                     </div>
                     <div class="mb-3">
+                        @error('sale_price')
+                        <div class="alert alert-danger mt-3">{{ $message }}</div>
+                        @enderror
+                        <label for="price" class="form-label">Giá Khuyến mãi</label>
+                        <input type="number" class="form-control" name="sale_price" value="{{ old($page == "product" ? 'sale_price' : '') }}" id="sale_price">
+                    </div>
+                    <div class="mb-3">
                         @error('quantify')
                         <div class="alert alert-danger mt-3">{{ $message }}</div>
                         @enderror

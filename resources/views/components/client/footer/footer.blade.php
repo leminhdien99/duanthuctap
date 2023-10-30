@@ -7,8 +7,8 @@
                     <div class="position-relative newsletter-inner">
                         <div class="newsletter-content">
                             <h2 class="mb-20">
-                                Ở nhà và nhận hàng ngày của bạn <br/>
-                                nhu cầu từ cửa hàng của chúng tôi </h2>
+                                Giao hàng tận tay khách hàng <br/>
+                            </h2>
                             <p class="mb-45">Bắt đầu mua sắm hàng ngày của bạn với
                                 <span class="text-brand">comhopcantho</span>
                             </p>
@@ -17,7 +17,6 @@
                                 <button class="btn" type="submit">Đặt mua</button>
                             </form>
                         </div>
-                        <img src="assets/imgs/banner/banner-9.png" alt="newsletter"/>
                     </div>
                 </div>
             </div>
@@ -167,6 +166,7 @@
                     <img class="" src="assets/imgs/theme/payment-method.png" alt=""/>
                 </div>
             </div>
+        </div>
     </section>
     <div class="container pb-30 wow animate__animated animate__fadeInUp" data-wow-delay="0">
         <div class="row align-items-center">
