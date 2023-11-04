@@ -19,7 +19,7 @@ class DetailsController extends Controller{
             'products.slug' => $slug,
         ];
         $product   = $this->product->getProductFirst($slug);
-
+//    dd($product);
         return view('client.pages.product.details', ['product' => $product]);
     }
 }

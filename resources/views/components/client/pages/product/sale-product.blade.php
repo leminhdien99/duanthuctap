@@ -1,5 +1,4 @@
 @foreach ($product as $item)
-
 <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
     <div class="product-cart-wrap mb-30">
         <div class="product-img-action-wrap">
@@ -56,5 +55,4 @@
         </div>
     </div>
 </div>
-
 @endforeach

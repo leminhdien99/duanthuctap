@@ -47,7 +47,7 @@
                         @endif
                     </div>
                     <div class="add-cart">
-                        <a class="add" href="{{route('listCart')}}"><i class="fi-rs-shopping-cart mr-5"></i>Thêm
+                        <a class="add" href="{{route('addCart',$item->slug)}}"><i class="fi-rs-shopping-cart mr-5"></i>Thêm
                         </a>
                     </div>
                 </div>

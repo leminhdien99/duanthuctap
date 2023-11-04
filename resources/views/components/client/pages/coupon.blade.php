@@ -1,5 +1,4 @@
 <div class="row mt-50">
-
     <div class="col-lg-5">
         <div class="p-40">
             <h4 class="mb-10">Mã giảm giá</h4>

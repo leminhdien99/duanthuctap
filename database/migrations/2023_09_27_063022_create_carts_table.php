@@ -13,14 +13,17 @@ return new class extends Migration{
     : void{
         Schema::create('carts', function (Blueprint $table){
             $table->id();
-            $table->foreignId('id_product')->constrained('products');
             $table->foreignId('id_user')->constrained('users');
-            $table->integer('quantify');
-            $table->bigInteger('price');
-            $table->bigInteger('total');
-            $table->date('date_input');
-            $table->string('name_product',255);
-            $table->string('image',255);
+            $table->foreignId('id_product')->constrained('products');
+            $table->integer('quantity');
+            $table->integer('price');
+            $table->unsignedBigInteger('total');
+            $table->integer('status')->default('0');
+            $table->string('token');
+            $table->string('name');
+            $table->string('images');
+            $table->string('date_input');
+            $table->timestamps();
         });
     }
 

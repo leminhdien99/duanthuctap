@@ -25,6 +25,9 @@ use App\Http\Controllers\Client\Account\ForgetPasswordController;
 use App\Http\Controllers\Client\Account\LoginController;
 use App\Http\Controllers\Client\Account\RegisterController;
 use App\Http\Controllers\Client\Cart\CartController;
+use App\Http\Controllers\Client\Cart\ViewCartController;
+use App\Http\Controllers\Client\Cart\AddCartController;
+use App\Http\Controllers\Client\Cart\DeleteCartController;
 use App\Http\Controllers\Client\CheckoutController;
 use App\Http\Controllers\Client\Account\GoogleController;
 
@@ -142,9 +145,13 @@ Route::group(['prefix' => 'admin'], function (){
 Route::group(['prefix' => '/'], function (){
     Route::get('', [ProductController::class, 'product'])->name('index');
     Route::group(['prefix' => 'cart'], function (){
-        Route::get('list', [CartController::class, 'list'])->name('listCart');
-        Route::get('add', [CartController::class, 'add'])->name('addCart');
-        Route::get('delete', [CartController::class, 'delete'])->name('deleteCart');
+        Route::get('list/{id}', [ViewCartController::class, 'list'])->name('listCart');
+        Route::get('/add/{slug}', [AddCartController::class, 'addCart'])->name('addCart');
+        Route::post('/add/{slug}', [AddCartController::class, 'addCart'])->name('addCart');
+        Route::put('/cart/update', [AddCartController::class, 'updateCart'])->name('updateCart');
+        Route::get('/cart/update-quantity', [AddCartController::class, 'updateQuantity'])->name('cart.quantity.update');
+        Route::get('delete/{id}', [DeleteCartController::class, 'delete'])->name('deleteCart');
+        Route::post('cart/delete-all', [DeleteCartController::class, 'deleteAll'])->name('deleteAll');
     });
 
 

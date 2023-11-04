@@ -3,11 +3,9 @@
     <div class="container mb-30">
         <div class="row">
             <div class="col-lg-4-5">
-                <div class="shop-product-fillter">
                     <div class="row product-grid">
                         <x-client.pages.product.saleProduct :product="$product"></x-client.pages.product.saleProduct>
                     </div>
-                </div>
                 <!--product grid-->
                 <div class="pagination-area mt-20 mb-20">
                     <nav aria-label="Page navigation example">

@@ -8,12 +8,10 @@ use Illuminate\View\Component;
 
 class checkout extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $total;
+    public function __construct($total)
     {
-        //
+        $this->total = $total;
     }
 
     /**

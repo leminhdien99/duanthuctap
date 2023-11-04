@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="{{asset('assets/css/style_blog3.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/main.css?v=5.6')}}"/>
-    @yield('js')
     @stack('link')
 </head>
 <body>
@@ -63,6 +62,6 @@
 <script src="{{asset('assets/js/shop.js?v=5.6')}}"></script>
 {{--upload anh account--}}
 <script src="{{asset('assets/js//upload.js')}}"></script>
-
+@yield('js')
 </html>
 

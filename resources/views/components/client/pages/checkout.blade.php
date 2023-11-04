@@ -3,49 +3,19 @@
         <div class="table-responsive">
             <table class="table no-border">
                 <tbody>
-                @php
-                    $dateCheckOut=[
-                         [
-                             'title'=>'Tổng',
-                             'sumtotol'=>200000,
-                             ],
-                              [
-                              'title'=>'Phí ship',
-                             'sumtotol'=>0,
-                             ],
-                             [
-                              'title'=>'Thuế',
-                             'sumtotol'=>0,
-                             ],
-                             [
-                              'title'=>'Tổng Cộng',
-                             'sumtotol'=>200000,
-                             ],
-
-                    ];
-
-
-                @endphp
-
-                @foreach($dateCheckOut as $key=>$item)
                     <tr>
                         <td class="cart_total_label">
-                            <h6 class="text-muted">{{$item['title']}} </h6>
+                            <h6 class="text-muted">Tổng </h6>
                         </td>
                         <td class="cart_total_amount">
-                            <h4 class="text-brand text-end">{{number_format($item['sumtotol'])}} đ </h4>
+                            <h4 class="text-brand text-end">{{number_format($total)}} đ </h4>
                         </td>
                     </tr>
-                    @if($key==2)
                         <tr>
                             <td scope="col" colspan="2">
                                 <div class="divider-2 mt-10 mb-10"></div>
                             </td>
                         </tr>
-                    @endif
-                @endforeach
-
-
                 </tbody>
             </table>
         </div>

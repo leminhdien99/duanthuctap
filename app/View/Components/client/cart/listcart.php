@@ -8,12 +8,10 @@ use Illuminate\View\Component;
 
 class listcart extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $cart;
+    public function __construct($cart)
     {
-        //
+        $this->cart = $cart;
     }
 
     /**

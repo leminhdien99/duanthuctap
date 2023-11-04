@@ -14,11 +14,24 @@
                                             <span class="zoom-icon"><i class="fi-rs-search"></i></span>
                                             <!-- MAIN SLIDES -->
                                             <div class="product-image-slider">
-                                                <figure class="border-radius-10">
-                                                    <img src="" alt="product image"/>
-                                                </figure>
+                                                @php
+                                                    $images = $product->images;
+                                                    // Tách chuỗi thành mảng
+                                                    $imageArray = explode(",", $images);
+
+                                                @endphp
+                                                @foreach($imageArray as $imageName)
+                                                    <figure class="border-radius-10">
+                                                        <img src="{{ asset('images/products/' . $imageName) }}" alt="product image" style="height: 497px; width: 497px" />
+                                                    </figure>
+                                                @endforeach
                                             </div>
                                             <!-- THUMBNAILS -->
+                                            <div class="slider-nav-thumbnails">
+                                                @foreach($imageArray as $imageName)
+                                                        <div><img src="{{ asset('images/products/' . $imageName) }}" alt="product image" style="height: 110px;width: 110px" /></div>
+                                                @endforeach
+                                            </div>
                                         </div>
                                         <!-- End Gallery -->
                                     </div>
