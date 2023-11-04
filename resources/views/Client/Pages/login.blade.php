@@ -15,7 +15,7 @@
                                         <img src="assets/imgs/theme/icons/logo-facebook.svg" alt="" />
                                         <span>Đăng nhập với Facebook</span>
                                     </a>
-                                    <a href="#" class="social-login google-login">
+                                    <a href="{{route('loginGoogle')}}" class="social-login google-login">
                                         <img src="assets/imgs/theme/icons/logo-google.svg" alt="" />
                                         <span>Đăng nhập với Google</span>
                                     </a>

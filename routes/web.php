@@ -26,6 +26,7 @@ use App\Http\Controllers\Client\Account\LoginController;
 use App\Http\Controllers\Client\Account\RegisterController;
 use App\Http\Controllers\Client\Cart\CartController;
 use App\Http\Controllers\Client\CheckoutController;
+use App\Http\Controllers\Client\Account\GoogleController;
 
 use App\Http\Controllers\Admin\Products\ListProductController;
 use App\Http\Controllers\Admin\Products\AddProductController;
@@ -182,4 +183,8 @@ Route::group(['prefix' => '/'], function (){
          ->name('updateProfile');
     Route::post('doi-mat-khau/{token}', [AccountController::class, 'updatePassword'])
          ->name('updatePassword');
+
+    Route::get('/google', [GoogleController::class, 'loginUsingGoogle'])->name('loginGoogle');
+    Route::get('/google/callback', [GoogleController::class, 'callbackFromGoogle'])
+         ->name('callBackGoogle');
 });
